@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cstddef>
 #include <format>
 #include <iostream>
 #include <numeric>
@@ -20,7 +21,7 @@ int main() {
                      "(de 0 a 1000).\n";
         return 1;
     }
-    std::vector<double> celsius(n);
+    std::vector<double> celsius(static_cast<std::size_t>(n));
     for (double& grados : celsius) {
         if (!(std::cin >> grados) || grados < -273.15 || grados > 1000.0) {
             std::cerr << "Error: faltan temperaturas o hay una no válida "
@@ -37,13 +38,13 @@ int main() {
     std::transform(celsius.begin(), celsius.end(), fahrenheit.begin(),
                    [](double c) { return c * 9.0 / 5.0 + 32.0; });
 
-    double sumaC = std::accumulate(celsius.begin(), celsius.end(), 0.0);
-    double sumaF =
+    double suma_c = std::accumulate(celsius.begin(), celsius.end(), 0.0);
+    double suma_f =
         std::accumulate(fahrenheit.begin(), fahrenheit.end(), 0.0);
     double cuantas = static_cast<double>(celsius.size());
 
     std::cout << "Celsius:" << unir(celsius) << '\n';
     std::cout << "Fahrenheit:" << unir(fahrenheit) << '\n';
     std::cout << std::format("Media: {:.1f} °C = {:.1f} °F\n",
-                             sumaC / cuantas, sumaF / cuantas);
+                             suma_c / cuantas, suma_f / cuantas);
 }

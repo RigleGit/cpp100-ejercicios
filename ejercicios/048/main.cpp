@@ -27,9 +27,9 @@ int main() {
     };
 
     std::string texto;
-    int numeroLinea = 0;
+    int numero_linea = 0;
     while (std::getline(std::cin, texto)) {
-        ++numeroLinea;
+        ++numero_linea;
         std::istringstream linea(texto);
         int a = 0;
         int b = 0;
@@ -37,7 +37,7 @@ int main() {
         std::string sobra;
         if (!(linea >> a >> simbolo >> b) || (linea >> sobra) ||
             a < -10000 || a > 10000 || b < -10000 || b > 10000) {
-            std::cerr << "Error en la línea " << numeroLinea
+            std::cerr << "Error en la línea " << numero_linea
                       << ": usa «a operación b» con enteros entre -10000 y "
                          "10000.\n";
             return 1;
@@ -47,12 +47,12 @@ int main() {
                                    return op.simbolo == simbolo;
                                });
         if (it == tabla.end()) {
-            std::cerr << "Error en la línea " << numeroLinea
+            std::cerr << "Error en la línea " << numero_linea
                       << ": operación desconocida: " << simbolo << '\n';
             return 1;
         }
         if (simbolo == "/" && b == 0) {
-            std::cerr << "Error en la línea " << numeroLinea
+            std::cerr << "Error en la línea " << numero_linea
                       << ": división entre cero.\n";
             return 1;
         }

@@ -12,8 +12,8 @@ int main() {
     std::cout << "Leídas: " << palabras.size() << '\n';
 
     std::sort(palabras.begin(), palabras.end());
-    auto nuevoFinal = std::unique(palabras.begin(), palabras.end());
-    palabras.erase(nuevoFinal, palabras.end());
+    auto nuevo_final = std::unique(palabras.begin(), palabras.end());
+    palabras.erase(nuevo_final, palabras.end());
 
     std::cout << "Distintas: " << palabras.size() << '\n';
     for (const std::string& p : palabras) {

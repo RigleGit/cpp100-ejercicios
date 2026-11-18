@@ -6,9 +6,9 @@
 int main() {
     std::map<std::string, std::string> agenda;
     std::string texto;
-    int numeroLinea = 0;
+    int numero_linea = 0;
     while (std::getline(std::cin, texto)) {
-        ++numeroLinea;
+        ++numero_linea;
         std::istringstream linea(texto);
         std::string orden;
         std::string nombre;
@@ -39,7 +39,7 @@ int main() {
                 std::cout << "  " << quien << ": " << numero << '\n';
             }
         } else {
-            std::cerr << "Error en la línea " << numeroLinea
+            std::cerr << "Error en la línea " << numero_linea
                       << ": usa ADD nombre teléfono, GET nombre, "
                          "DEL nombre o LIST.\n";
             return 1;

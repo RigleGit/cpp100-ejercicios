@@ -2,8 +2,8 @@
 #include <iostream>
 #include <string>
 
-int reemplazarTodo(std::string& texto, const std::string& buscado,
-                   const std::string& nuevo) {
+int reemplazar_todo(std::string& texto, const std::string& buscado,
+                    const std::string& nuevo) {
     int cambios = 0;
     std::size_t posicion = texto.find(buscado);
     while (posicion != std::string::npos) {
@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
     std::string linea;
     int total = 0;
     while (std::getline(std::cin, linea)) {
-        total += reemplazarTodo(linea, buscado, nuevo);
+        total += reemplazar_todo(linea, buscado, nuevo);
         std::cout << linea << '\n';
     }
     std::cout << "Reemplazos: " << total << '\n';

@@ -68,7 +68,10 @@ int main(int argc, char* argv[]) {
     const ExportadorTexto texto;
     const ExportadorCsv csv;
 
-    std::string_view elegido = argc == 2 ? argv[1] : "";
+    std::string elegido;
+    if (argc == 2) {
+        elegido = argv[1];
+    }
     const Exportador* formato = nullptr;
     if (elegido == "texto") {
         formato = &texto;

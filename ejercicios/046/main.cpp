@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cstddef>
 #include <iostream>
 #include <ranges>
 #include <vector>
@@ -9,7 +10,7 @@ int main() {
         std::cerr << "Error: escribe cuántos números hay (de 0 a 1000).\n";
         return 1;
     }
-    std::vector<int> numeros(n);
+    std::vector<int> numeros(static_cast<std::size_t>(n));
     for (int& numero : numeros) {
         if (!(std::cin >> numero) || numero < -10000 || numero > 10000) {
             std::cerr << "Error: faltan números o hay uno no válido (de "
@@ -25,9 +26,9 @@ int main() {
     }
     std::cout << '\n';
 
-    auto esPar = [](int x) { return x % 2 == 0; };
+    auto es_par = [](int x) { return x % 2 == 0; };
     auto cuadrado = [](int x) { return x * x; };
-    auto resultado = numeros | std::views::filter(esPar) |
+    auto resultado = numeros | std::views::filter(es_par) |
                      std::views::transform(cuadrado);
 
     std::cout << "Cuadrados de los pares:";

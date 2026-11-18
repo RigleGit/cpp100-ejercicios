@@ -4,7 +4,7 @@
 #include <iterator>
 #include <string>
 
-std::array<int, 5> conPuntoExtra(std::array<int, 5> notas) {
+std::array<int, 5> con_punto_extra(std::array<int, 5> notas) {
     for (int& nota : notas) {
         if (nota < 10) {
             ++nota;
@@ -13,7 +13,7 @@ std::array<int, 5> conPuntoExtra(std::array<int, 5> notas) {
     return notas;
 }
 
-void subirEnSitio(int notas[], std::size_t n) {
+void subir_en_sitio(int notas[], std::size_t n) {
     for (std::size_t i = 0; i < n; ++i) {
         if (notas[i] < 10) {
             ++notas[i];
@@ -48,10 +48,10 @@ int main() {
     }
 
     std::array<int, 5> notas = std::to_array(leidas);
-    std::array<int, 5> subidas = conPuntoExtra(notas);
-    subirEnSitio(leidas, std::size(leidas));
+    std::array<int, 5> subidas = con_punto_extra(notas);
+    subir_en_sitio(leidas, std::size(leidas));
 
     mostrar("Notas", notas);
     mostrar("Copia con punto extra", subidas);
-    mostrar("Array de C tras subirEnSitio", leidas, std::size(leidas));
+    mostrar("Array de C tras subir_en_sitio", leidas, std::size(leidas));
 }

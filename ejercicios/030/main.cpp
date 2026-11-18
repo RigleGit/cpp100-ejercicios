@@ -2,7 +2,7 @@
 #include <sstream>
 #include <string>
 
-int contarPalabras(const std::string& linea) {
+int contar_palabras(const std::string& linea) {
     std::istringstream flujo(linea);
     std::string palabra;
     int total = 0;
@@ -18,9 +18,9 @@ int main() {
     int palabras = 0;
     while (std::getline(std::cin, linea)) {
         ++lineas;
-        const int enLinea = contarPalabras(linea);
-        palabras += enLinea;
-        std::cout << "Línea " << lineas << ": " << enLinea << '\n';
+        const int en_linea = contar_palabras(linea);
+        palabras += en_linea;
+        std::cout << "Línea " << lineas << ": " << en_linea << '\n';
     }
     std::cout << "Líneas: " << lineas << '\n';
     std::cout << "Palabras: " << palabras << '\n';

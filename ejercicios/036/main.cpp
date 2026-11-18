@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 
-bool leerValores(std::vector<int>& valores) {
+bool leer_valores(std::vector<int>& valores) {
     int n{};
     if (!(std::cin >> n) || n < 0 || n > 1000) {
         return false;
@@ -37,7 +37,7 @@ Extremos extremos(const std::vector<int>& valores) {
 
 int main() {
     std::vector<int> valores;
-    if (!leerValores(valores)) {
+    if (!leer_valores(valores)) {
         std::cerr << "Error: faltan números o hay uno no válido.\n";
         return 1;
     }

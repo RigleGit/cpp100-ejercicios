@@ -2,12 +2,12 @@
   {
     "name": "normal",
     "stdin": "4 7 10 5 9\n",
-    "stdout": "Notas: 4 7 10 5 9\nCopia con punto extra: 5 8 10 6 10\nArray de C tras subirEnSitio: 5 8 10 6 10\n"
+    "stdout": "Notas: 4 7 10 5 9\nCopia con punto extra: 5 8 10 6 10\nArray de C tras subir_en_sitio: 5 8 10 6 10\n"
   },
   {
     "name": "extremos",
     "stdin": "0 10 0 10 0\n",
-    "stdout": "Notas: 0 10 0 10 0\nCopia con punto extra: 1 10 1 10 1\nArray de C tras subirEnSitio: 1 10 1 10 1\n"
+    "stdout": "Notas: 0 10 0 10 0\nCopia con punto extra: 1 10 1 10 1\nArray de C tras subir_en_sitio: 1 10 1 10 1\n"
   },
   {
     "name": "faltan",

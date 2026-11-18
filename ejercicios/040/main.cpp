@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-bool leerValores(std::vector<int>& valores) {
+bool leer_valores(std::vector<int>& valores) {
     int n{};
     if (!(std::cin >> n) || n < 0 || n > 1000) {
         return false;
@@ -25,7 +25,11 @@ void mostrar(const std::string& etiqueta, const std::vector<int>& valores) {
     std::cout << '\n';
 }
 
-int quitarNegativos(std::vector<int>& valores) {
+bool es_negativo(int valor) {
+    return valor < 0;
+}
+
+int quitar_negativos(std::vector<int>& valores) {
     int quitados = 0;
     auto it = valores.begin();
     while (it != valores.end()) {
@@ -41,21 +45,21 @@ int quitarNegativos(std::vector<int>& valores) {
 
 int main() {
     std::vector<int> valores;
-    if (!leerValores(valores)) {
+    if (!leer_valores(valores)) {
         std::cerr << "Error: faltan números o hay uno no válido.\n";
         return 1;
     }
 
-    std::vector<int> conBucle = valores;
-    const int quitadosBucle = quitarNegativos(conBucle);
+    std::vector<int> con_bucle = valores;
+    const int quitados_bucle = quitar_negativos(con_bucle);
 
-    std::vector<int> conErase = valores;
-    const std::size_t quitadosErase =
-        std::erase_if(conErase, [](int valor) { return valor < 0; });
+    std::vector<int> con_erase = valores;
+    const std::size_t quitados_erase =
+        std::erase_if(con_erase, es_negativo);
 
     mostrar("Original", valores);
-    mostrar("Con el bucle", conBucle);
-    std::cout << "Quitados con el bucle: " << quitadosBucle << '\n';
-    mostrar("Con std::erase_if", conErase);
-    std::cout << "Quitados con std::erase_if: " << quitadosErase << '\n';
+    mostrar("Con el bucle", con_bucle);
+    std::cout << "Quitados con el bucle: " << quitados_bucle << '\n';
+    mostrar("Con std::erase_if", con_erase);
+    std::cout << "Quitados con std::erase_if: " << quitados_erase << '\n';
 }

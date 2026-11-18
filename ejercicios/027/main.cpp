@@ -11,7 +11,7 @@ int sumar(std::span<const int> tramo) {
     return total;
 }
 
-bool tramoValido(int inicio, int cantidad, std::size_t total) {
+bool tramo_valido(int inicio, int cantidad, std::size_t total) {
     if (inicio < 0 || cantidad < 0) {
         return false;
     }
@@ -28,7 +28,7 @@ int main() {
         std::cerr << "Error: se esperaban dos enteros.\n";
         return 1;
     }
-    if (!tramoValido(inicio, cantidad, ventas.size())) {
+    if (!tramo_valido(inicio, cantidad, ventas.size())) {
         std::cerr << "Error: el tramo se sale de la semana.\n";
         return 1;
     }

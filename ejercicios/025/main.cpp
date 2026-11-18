@@ -5,12 +5,12 @@ struct Marcador {
     int visitante = 0;
 };
 
-bool esEquipo(char equipo) {
+bool es_equipo(char equipo) {
     return equipo == 'L' || equipo == 'V';
 }
 
 // Antes de llamarla, comprueba que equipo sea 'L' o 'V'.
-int& puntosDe(Marcador& marcador, char equipo) {
+int& puntos_de(Marcador& marcador, char equipo) {
     if (equipo == 'L') {
         return marcador.local;
     }
@@ -21,7 +21,7 @@ int main() {
     Marcador marcador;
     char equipo{};
     while (std::cin >> equipo) {
-        if (!esEquipo(equipo)) {
+        if (!es_equipo(equipo)) {
             std::cerr << "Error: equipo desconocido: " << equipo << '\n';
             return 1;
         }
@@ -34,7 +34,7 @@ int main() {
             std::cerr << "Error: una canasta vale 1, 2 o 3 puntos.\n";
             return 1;
         }
-        puntosDe(marcador, equipo) += puntos;
+        puntos_de(marcador, equipo) += puntos;
     }
 
     std::cout << "Local " << marcador.local << " - " << marcador.visitante

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-bool esVocal(char c) {
+bool es_vocal(char c) {
     switch (c) {
     case 'a':
     case 'e':
@@ -19,10 +19,10 @@ bool esVocal(char c) {
     }
 }
 
-int contarVocales(const std::string& texto) {
+int contar_vocales(const std::string& texto) {
     int total = 0;
     for (char c : texto) {
-        if (esVocal(c)) {
+        if (es_vocal(c)) {
             ++total;
         }
     }
@@ -32,5 +32,5 @@ int contarVocales(const std::string& texto) {
 int main() {
     std::string linea;
     std::getline(std::cin, linea);
-    std::cout << "Vocales: " << contarVocales(linea) << '\n';
+    std::cout << "Vocales: " << contar_vocales(linea) << '\n';
 }

@@ -3,7 +3,7 @@
 #include <sstream>
 #include <string>
 
-bool leerConjunto(std::set<int>& conjunto) {
+bool leer_conjunto(std::set<int>& conjunto) {
     std::string texto;
     if (!std::getline(std::cin, texto)) {
         return false;
@@ -33,7 +33,7 @@ void mostrar(const std::string& etiqueta, const std::set<int>& conjunto) {
 int main() {
     std::set<int> a;
     std::set<int> b;
-    if (!leerConjunto(a) || !leerConjunto(b)) {
+    if (!leer_conjunto(a) || !leer_conjunto(b)) {
         std::cerr << "Error: escribe dos líneas de números enteros.\n";
         return 1;
     }

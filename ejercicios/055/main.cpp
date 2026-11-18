@@ -12,7 +12,7 @@ struct Rectangulo {
         return 2 * (ancho + alto);
     }
 
-    bool esCuadrado() {
+    bool es_cuadrado() {
         return ancho == alto;
     }
 
@@ -26,7 +26,7 @@ void describir(Rectangulo& r) {
     std::cout << "Rectángulo " << r.ancho << " x " << r.alto << '\n';
     std::cout << "Área: " << r.area() << '\n';
     std::cout << "Perímetro: " << r.perimetro() << '\n';
-    std::cout << "Cuadrado: " << (r.esCuadrado() ? "sí" : "no") << '\n';
+    std::cout << "Cuadrado: " << (r.es_cuadrado() ? "sí" : "no") << '\n';
 }
 
 int main() {

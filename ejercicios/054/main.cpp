@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-std::string enMinusculas(std::string texto) {
+std::string en_minusculas(std::string texto) {
     for (char& c : texto) {
         c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
     }
@@ -16,7 +16,7 @@ int main() {
     std::map<std::string, std::vector<std::string>> grupos;
     std::string palabra;
     while (std::cin >> palabra) {
-        palabra = enMinusculas(palabra);
+        palabra = en_minusculas(palabra);
         std::string clave = palabra;
         std::sort(clave.begin(), clave.end());
         std::vector<std::string>& grupo = grupos[clave];

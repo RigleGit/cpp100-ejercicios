@@ -13,14 +13,14 @@ struct Version {
     auto operator<=>(const Version&) const = default;
 };
 
-bool leerParte(const std::string& texto, unsigned& parte) {
+bool leer_parte(const std::string& texto, unsigned& parte) {
     const char* inicio = texto.data();
     const char* fin = inicio + texto.size();
     auto [resto, error] = std::from_chars(inicio, fin, parte);
     return !texto.empty() && error == std::errc{} && resto == fin;
 }
 
-bool leerVersion(const std::string& texto, Version& version) {
+bool leer_version(const std::string& texto, Version& version) {
     auto punto1 = texto.find('.');
     if (punto1 == std::string::npos) {
         return false;
@@ -29,10 +29,10 @@ bool leerVersion(const std::string& texto, Version& version) {
     if (punto2 == std::string::npos) {
         return false;
     }
-    return leerParte(texto.substr(0, punto1), version.mayor) &&
-           leerParte(texto.substr(punto1 + 1, punto2 - punto1 - 1),
-                     version.menor) &&
-           leerParte(texto.substr(punto2 + 1), version.parche);
+    return leer_parte(texto.substr(0, punto1), version.mayor) &&
+           leer_parte(texto.substr(punto1 + 1, punto2 - punto1 - 1),
+                      version.menor) &&
+           leer_parte(texto.substr(punto2 + 1), version.parche);
 }
 
 std::ostream& operator<<(std::ostream& salida, const Version& v) {
@@ -44,7 +44,7 @@ int main() {
     std::string texto;
     while (std::cin >> texto) {
         Version v;
-        if (!leerVersion(texto, v)) {
+        if (!leer_version(texto, v)) {
             std::cerr << "Error: versión no válida: " << texto << '\n';
             return 1;
         }

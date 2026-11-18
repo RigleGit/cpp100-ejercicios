@@ -1,6 +1,6 @@
 #include <iostream>
 
-void intercambiarCopia(int a, int b) {
+void intercambiar_copia(int a, int b) {
     int auxiliar = a;
     a = b;
     b = auxiliar;
@@ -21,8 +21,8 @@ int main() {
     }
 
     std::cout << "Antes: a = " << a << ", b = " << b << '\n';
-    intercambiarCopia(a, b);
-    std::cout << "Tras intercambiarCopia: a = " << a << ", b = " << b
+    intercambiar_copia(a, b);
+    std::cout << "Tras intercambiar_copia: a = " << a << ", b = " << b
               << '\n';
     intercambiar(a, b);
     std::cout << "Tras intercambiar: a = " << a << ", b = " << b << '\n';

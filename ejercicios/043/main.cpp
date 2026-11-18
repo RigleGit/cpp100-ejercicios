@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cstddef>
 #include <iostream>
 #include <iterator>
 #include <vector>
@@ -11,7 +12,7 @@ int main() {
                      "(de 0 a 1000).\n";
         return 1;
     }
-    std::vector<int> numeros(n);
+    std::vector<int> numeros(static_cast<std::size_t>(n));
     for (int& numero : numeros) {
         if (!(std::cin >> numero)) {
             std::cerr << "Error: faltan números o hay uno no válido.\n";

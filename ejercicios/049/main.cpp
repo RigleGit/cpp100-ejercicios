@@ -3,7 +3,7 @@
 #include <map>
 #include <string>
 
-std::string enMinusculas(std::string texto) {
+std::string en_minusculas(std::string texto) {
     for (char& c : texto) {
         c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
     }
@@ -15,7 +15,7 @@ int main() {
     int total = 0;
     std::string palabra;
     while (std::cin >> palabra) {
-        ++frecuencias[enMinusculas(palabra)];
+        ++frecuencias[en_minusculas(palabra)];
         ++total;
     }
 

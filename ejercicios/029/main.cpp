@@ -15,7 +15,7 @@ char minuscula(char c) {
     return static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
 }
 
-bool esPalindromo(const std::string& texto) {
+bool es_palindromo(const std::string& texto) {
     const std::size_t n = texto.size();
     for (std::size_t i = 0; i < n / 2; ++i) {
         if (minuscula(texto[i]) != minuscula(texto[n - 1 - i])) {
@@ -33,7 +33,7 @@ int main() {
     }
 
     std::cout << "Al revés: " << invertir(palabra) << '\n';
-    if (esPalindromo(palabra)) {
+    if (es_palindromo(palabra)) {
         std::cout << "Es palíndromo.\n";
     } else {
         std::cout << "No es palíndromo.\n";

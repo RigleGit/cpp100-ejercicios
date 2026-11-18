@@ -1,8 +1,9 @@
 #include <algorithm>
+#include <cstddef>
 #include <iostream>
 #include <vector>
 
-auto mayorQue(int limite) {
+auto mayor_que(int limite) {
     return [limite](int x) { return x > limite; };
 }
 
@@ -14,7 +15,7 @@ int main() {
                      "(de 0 a 1000).\n";
         return 1;
     }
-    std::vector<int> numeros(n);
+    std::vector<int> numeros(static_cast<std::size_t>(n));
     for (int& numero : numeros) {
         if (!(std::cin >> numero) || numero < -1000000 ||
             numero > 1000000) {
@@ -24,7 +25,7 @@ int main() {
         }
     }
 
-    auto filtro = mayorQue(umbral);
+    auto filtro = mayor_que(umbral);
     std::vector<int> elegidos;
     int suma = 0;
     int comprobaciones = 0;

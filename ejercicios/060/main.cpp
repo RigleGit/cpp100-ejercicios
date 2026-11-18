@@ -59,9 +59,9 @@ int main() {
     std::cout << "Titular: " << cuenta.titular() << '\n';
 
     std::string texto;
-    int numeroLinea = 1;
+    int numero_linea = 1;
     while (std::getline(std::cin, texto)) {
-        ++numeroLinea;
+        ++numero_linea;
         std::istringstream linea(texto);
         std::string orden;
         long long importe = 0;
@@ -69,7 +69,7 @@ int main() {
         if (!(linea >> orden >> importe) || (linea >> sobra) ||
             (orden != "ingresar" && orden != "retirar") || importe < 1 ||
             importe > 1000000) {
-            std::cerr << "Error en la línea " << numeroLinea
+            std::cerr << "Error en la línea " << numero_linea
                       << ": usa «ingresar N» o «retirar N» con N de 1 a "
                          "1000000.\n";
             return 1;

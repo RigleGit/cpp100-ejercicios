@@ -42,7 +42,7 @@ std::ostream& operator<<(std::ostream& salida, const Fraccion& f) {
     return salida << f.numerador() << '/' << f.denominador();
 }
 
-bool enRango(long long x) {
+bool en_rango(long long x) {
     return x >= -1000000 && x <= 1000000;
 }
 
@@ -51,8 +51,8 @@ int main() {
     long long b = 0;
     long long c = 0;
     long long d = 0;
-    if (!(std::cin >> a >> b >> c >> d) || !enRango(a) || !enRango(b) ||
-        !enRango(c) || !enRango(d)) {
+    if (!(std::cin >> a >> b >> c >> d) || !en_rango(a) || !en_rango(b) ||
+        !en_rango(c) || !en_rango(d)) {
         std::cerr << "Error: escribe dos fracciones como cuatro enteros "
                      "(de -1000000 a 1000000).\n";
         return 1;

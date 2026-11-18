@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 
-bool leerValores(std::vector<int>& valores) {
+bool leer_valores(std::vector<int>& valores) {
     int n{};
     if (!(std::cin >> n) || n < 0 || n > 1000) {
         return false;
@@ -16,7 +16,7 @@ bool leerValores(std::vector<int>& valores) {
     return true;
 }
 
-bool estaOrdenado(const std::vector<int>& valores) {
+bool esta_ordenado(const std::vector<int>& valores) {
     for (std::size_t i = 1; i < valores.size(); ++i) {
         if (valores[i] < valores[i - 1]) {
             return false;
@@ -26,7 +26,7 @@ bool estaOrdenado(const std::vector<int>& valores) {
 }
 
 // Primera posición cuyo valor no es menor que buscado.
-std::size_t buscarPosicion(const std::vector<int>& valores, int buscado) {
+std::size_t buscar_posicion(const std::vector<int>& valores, int buscado) {
     std::size_t izquierda = 0;
     std::size_t derecha = valores.size();
     while (izquierda < derecha) {
@@ -43,16 +43,16 @@ std::size_t buscarPosicion(const std::vector<int>& valores, int buscado) {
 int main() {
     std::vector<int> valores;
     int buscado{};
-    if (!leerValores(valores) || !(std::cin >> buscado)) {
+    if (!leer_valores(valores) || !(std::cin >> buscado)) {
         std::cerr << "Error: faltan números o hay uno no válido.\n";
         return 1;
     }
-    if (!estaOrdenado(valores)) {
+    if (!esta_ordenado(valores)) {
         std::cerr << "Error: los valores deben ir de menor a mayor.\n";
         return 1;
     }
 
-    const std::size_t posicion = buscarPosicion(valores, buscado);
+    const std::size_t posicion = buscar_posicion(valores, buscado);
     if (posicion < valores.size() && valores[posicion] == buscado) {
         std::cout << "Encontrado en la posición " << posicion << ".\n";
     } else {

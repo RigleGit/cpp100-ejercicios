@@ -3,7 +3,7 @@
 #include <string>
 #include <system_error>
 
-bool leerEntero(const std::string& texto, int& valor) {
+bool leer_entero(const std::string& texto, int& valor) {
     const char* fin = texto.data() + texto.size();
     auto [resto, error] = std::from_chars(texto.data(), fin, valor);
     return error == std::errc{} && resto == fin;
@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
     int desplazamiento{};
-    if (!leerEntero(argv[1], desplazamiento)) {
+    if (!leer_entero(argv[1], desplazamiento)) {
         std::cerr << "Error: el desplazamiento debe ser un entero.\n";
         return 1;
     }
