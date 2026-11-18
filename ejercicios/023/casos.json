@@ -1,0 +1,26 @@
+[
+  {
+    "name": "normal",
+    "stdin": "Hola, mundo\n",
+    "stdout": "Vocales: 4\n"
+  },
+  {
+    "name": "mayusculas",
+    "stdin": "AEIOU aeiou\n",
+    "stdout": "Vocales: 10\n"
+  },
+  {
+    "name": "tildes",
+    "stdin": "Murciélago\n",
+    "stdout": "Vocales: 4\n"
+  },
+  {
+    "name": "sin_vocales",
+    "stdin": "xyz 123\n",
+    "stdout": "Vocales: 0\n"
+  },
+  {
+    "name": "vacia",
+    "stdout": "Vocales: 0\n"
+  }
+]

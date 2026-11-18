@@ -1,0 +1,33 @@
+[
+  {
+    "name": "normal",
+    "stdin": "4 7 10 5 9\n",
+    "stdout": "Notas: 4 7 10 5 9\nCopia con punto extra: 5 8 10 6 10\nArray de C tras subirEnSitio: 5 8 10 6 10\n"
+  },
+  {
+    "name": "extremos",
+    "stdin": "0 10 0 10 0\n",
+    "stdout": "Notas: 0 10 0 10 0\nCopia con punto extra: 1 10 1 10 1\nArray de C tras subirEnSitio: 1 10 1 10 1\n"
+  },
+  {
+    "name": "faltan",
+    "stdin": "4 7 10\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: se esperaban cinco notas enteras.\n"
+  },
+  {
+    "name": "fuera_de_rango",
+    "stdin": "4 7 11 5 9\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: las notas van de 0 a 10.\n"
+  },
+  {
+    "name": "negativa",
+    "stdin": "4 -1 10 5 9\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: las notas van de 0 a 10.\n"
+  }
+]

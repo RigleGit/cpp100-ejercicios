@@ -1,0 +1,42 @@
+[
+  {
+    "name": "formulario correcto",
+    "stdin": "Ana Pérez\nana@ejemplo.com\n34\nclave1234\n",
+    "stdout": "Formulario correcto\n",
+    "stderr": ""
+  },
+  {
+    "name": "todo mal",
+    "stdin": "\nana.ejemplo.com\n17\ncorta\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Errores: 4\n- nombre: entre 1 y 40 bytes\n- email: forma usuario@dominio.ext\n- edad: entero entre 18 y 120\n- clave: 8 caracteres o más, letras y cifras\n"
+  },
+  {
+    "name": "límites aceptados",
+    "stdin": "A\na@b.c\n18\nabcdefg8\n",
+    "stdout": "Formulario correcto\n",
+    "stderr": ""
+  },
+  {
+    "name": "email y edad límite",
+    "stdin": "Luis\nluis@@b.com\n121\nsolotexto\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Errores: 3\n- email: forma usuario@dominio.ext\n- edad: entero entre 18 y 120\n- clave: 8 caracteres o más, letras y cifras\n"
+  },
+  {
+    "name": "dominio sin punto útil",
+    "stdin": "Eva\neva@.com\n120\n12345678\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Errores: 2\n- email: forma usuario@dominio.ext\n- clave: 8 caracteres o más, letras y cifras\n"
+  },
+  {
+    "name": "entrada vacía",
+    "stdin": "",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Errores: 4\n- nombre: entre 1 y 40 bytes\n- email: forma usuario@dominio.ext\n- edad: entero entre 18 y 120\n- clave: 8 caracteres o más, letras y cifras\n"
+  }
+]

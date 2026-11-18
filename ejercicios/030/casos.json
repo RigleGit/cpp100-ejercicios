@@ -1,0 +1,26 @@
+[
+  {
+    "name": "normal",
+    "stdin": "El perro come\n  dos   espacios  \n\nfin\n",
+    "stdout": "Línea 1: 3\nLínea 2: 2\nLínea 3: 0\nLínea 4: 1\nLíneas: 4\nPalabras: 6\n"
+  },
+  {
+    "name": "tabuladores",
+    "stdin": "uno\tdos\n",
+    "stdout": "Línea 1: 2\nLíneas: 1\nPalabras: 2\n"
+  },
+  {
+    "name": "sin_salto_final",
+    "stdin": "hola mundo",
+    "stdout": "Línea 1: 2\nLíneas: 1\nPalabras: 2\n"
+  },
+  {
+    "name": "vacia",
+    "stdout": "Líneas: 0\nPalabras: 0\n"
+  },
+  {
+    "name": "puntuacion",
+    "stdin": "hola, ¿qué tal?\n",
+    "stdout": "Línea 1: 3\nLíneas: 1\nPalabras: 3\n"
+  }
+]

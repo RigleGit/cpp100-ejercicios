@@ -1,0 +1,56 @@
+[
+  {
+    "name": "encontrado",
+    "stdin": "5 1 3 5 7 9 7\n",
+    "stdout": "Encontrado en la posición 3.\n"
+  },
+  {
+    "name": "primero",
+    "stdin": "5 1 3 5 7 9 1\n",
+    "stdout": "Encontrado en la posición 0.\n"
+  },
+  {
+    "name": "ultimo",
+    "stdin": "5 1 3 5 7 9 9\n",
+    "stdout": "Encontrado en la posición 4.\n"
+  },
+  {
+    "name": "ausente_medio",
+    "stdin": "5 1 3 5 7 9 4\n",
+    "stdout": "No está; iría en la posición 2.\n"
+  },
+  {
+    "name": "ausente_menor",
+    "stdin": "5 1 3 5 7 9 0\n",
+    "stdout": "No está; iría en la posición 0.\n"
+  },
+  {
+    "name": "ausente_mayor",
+    "stdin": "5 1 3 5 7 9 10\n",
+    "stdout": "No está; iría en la posición 5.\n"
+  },
+  {
+    "name": "duplicados",
+    "stdin": "6 2 4 4 4 8 9 4\n",
+    "stdout": "Encontrado en la posición 1.\n"
+  },
+  {
+    "name": "vacio",
+    "stdin": "0 5\n",
+    "stdout": "No está; iría en la posición 0.\n"
+  },
+  {
+    "name": "desordenado",
+    "stdin": "3 1 5 2 2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: los valores deben ir de menor a mayor.\n"
+  },
+  {
+    "name": "falta_buscado",
+    "stdin": "2 1 2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada no válida.\n"
+  }
+]

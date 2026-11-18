@@ -1,0 +1,7 @@
+[
+  {
+    "name": "valores",
+    "stdout": "Nombre: Ana\nEdad: 20\nAltura: 1.68 m\nCurso: 2\nEstudia: true\n",
+    "stderr": ""
+  }
+]

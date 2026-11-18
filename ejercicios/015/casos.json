@@ -1,0 +1,33 @@
+[
+  {
+    "name": "segundo_mayor",
+    "stdin": "3 7\n",
+    "stdout": "El mayor es 7.\n",
+    "stderr": ""
+  },
+  {
+    "name": "primero_mayor",
+    "stdin": "7 3\n",
+    "stdout": "El mayor es 7.\n",
+    "stderr": ""
+  },
+  {
+    "name": "empate",
+    "stdin": "5 5\n",
+    "stdout": "El mayor es 5.\n",
+    "stderr": ""
+  },
+  {
+    "name": "negativos",
+    "stdin": "-4 -9\n",
+    "stdout": "El mayor es -4.\n",
+    "stderr": ""
+  },
+  {
+    "name": "falta_dato",
+    "stdin": "3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: se esperaban dos enteros.\n"
+  }
+]

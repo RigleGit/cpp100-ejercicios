@@ -1,0 +1,59 @@
+[
+  {
+    "name": "tres elementos",
+    "args": [
+      "3"
+    ],
+    "stdout": "Original: [1, 2, 3]\nCopia cambiada: [99, 2, 3]\nOriginal intacto: [1, 2, 3]\nAsignada: [1, 2, 3]\nTras asignarse a sí misma: [1, 2, 3]\nMovida: [99, 2, 3]\nMovida otra vez: [1, 2, 3]\n",
+    "stderr": ""
+  },
+  {
+    "name": "un elemento",
+    "args": [
+      "1"
+    ],
+    "stdout": "Original: [1]\nCopia cambiada: [99]\nOriginal intacto: [1]\nAsignada: [1]\nTras asignarse a sí misma: [1]\nMovida: [99]\nMovida otra vez: [1]\n",
+    "stderr": ""
+  },
+  {
+    "name": "cero elementos",
+    "args": [
+      "0"
+    ],
+    "stdout": "Original: []\nCopia cambiada: []\nOriginal intacto: []\nAsignada: []\nTras asignarse a sí misma: []\nMovida: []\nMovida otra vez: []\n",
+    "stderr": ""
+  },
+  {
+    "name": "negativo",
+    "args": [
+      "-1"
+    ],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 066 N, con N entre 0 y 1000.\n"
+  },
+  {
+    "name": "demasiado grande",
+    "args": [
+      "1001"
+    ],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 066 N, con N entre 0 y 1000.\n"
+  },
+  {
+    "name": "no numérico",
+    "args": [
+      "3a"
+    ],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 066 N, con N entre 0 y 1000.\n"
+  },
+  {
+    "name": "sin argumento",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 066 N, con N entre 0 y 1000.\n"
+  }
+]

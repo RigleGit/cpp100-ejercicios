@@ -1,0 +1,48 @@
+[
+  {
+    "name": "normal",
+    "stdin": "5\n6\n3 8 -2 5 9 6\n",
+    "stdout": "Mayores que 5: 3\nPrimero: 8 en la posición 1\n"
+  },
+  {
+    "name": "ninguno supera",
+    "stdin": "10\n3\n1 10 7\n",
+    "stdout": "Mayores que 10: 0\nNinguno supera el umbral.\n"
+  },
+  {
+    "name": "primero en la posición 0",
+    "stdin": "0\n3\n4 -1 2\n",
+    "stdout": "Mayores que 0: 2\nPrimero: 4 en la posición 0\n"
+  },
+  {
+    "name": "umbral negativo",
+    "stdin": "-5\n4\n-9 -7 -5 -3\n",
+    "stdout": "Mayores que -5: 1\nPrimero: -3 en la posición 3\n"
+  },
+  {
+    "name": "sin números",
+    "stdin": "0\n0\n",
+    "stdout": "Mayores que 0: 0\nNinguno supera el umbral.\n"
+  },
+  {
+    "name": "número no válido",
+    "stdin": "5\n3\n1 x 7\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan números o hay uno no válido.\n"
+  },
+  {
+    "name": "faltan números",
+    "stdin": "5\n3\n1 7\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan números o hay uno no válido.\n"
+  },
+  {
+    "name": "cantidad excesiva",
+    "stdin": "5\n1001\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe el umbral y cuántos números hay (de 0 a 1000).\n"
+  }
+]

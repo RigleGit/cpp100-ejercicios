@@ -1,0 +1,42 @@
+[
+  {
+    "name": "normal",
+    "stdout": "Construye a\nConstruye b\nConstruye c\nFin del bloque interior\nDestruye c\nDestruye b\nConstruye pareja.primero\nConstruye pareja.segundo\nFin de main\nDestruye pareja.segundo\nDestruye pareja.primero\nDestruye a\n",
+    "stderr": ""
+  },
+  {
+    "name": "return adelantado",
+    "args": [
+      "return"
+    ],
+    "stdout": "Construye a\nConstruye b\nConstruye c\nFin del bloque interior\nDestruye c\nDestruye b\nConstruye pareja.primero\nConstruye pareja.segundo\nSale con return\nDestruye pareja.segundo\nDestruye pareja.primero\nDestruye a\n",
+    "stderr": ""
+  },
+  {
+    "name": "std::exit no destruye locales",
+    "args": [
+      "exit"
+    ],
+    "stdout": "Construye a\nConstruye b\nConstruye c\nFin del bloque interior\nDestruye c\nDestruye b\nConstruye pareja.primero\nConstruye pareja.segundo\nSale con std::exit\n",
+    "stderr": ""
+  },
+  {
+    "name": "modo desconocido",
+    "args": [
+      "salir"
+    ],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 062 [normal|return|exit].\n"
+  },
+  {
+    "name": "demasiados argumentos",
+    "args": [
+      "normal",
+      "exit"
+    ],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 062 [normal|return|exit].\n"
+  }
+]

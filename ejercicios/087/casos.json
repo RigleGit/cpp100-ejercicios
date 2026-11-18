@@ -1,0 +1,47 @@
+[
+  {
+    "name": "crear archivo",
+    "args": ["notas.txt"],
+    "stdin": "Comprar pan\nLlamar a Luis\n",
+    "stdout": "Líneas guardadas en notas.txt: 2\n",
+    "expect_files": {"notas.txt": "Comprar pan\nLlamar a Luis\n"}
+  },
+  {
+    "name": "sobrescribir y completar la última línea",
+    "args": ["notas.txt"],
+    "stdin": "Nueva nota",
+    "files": {"notas.txt": "contenido anterior\n"},
+    "stdout": "Líneas guardadas en notas.txt: 1\n",
+    "expect_files": {"notas.txt": "Nueva nota\n"}
+  },
+  {
+    "name": "añadir al final",
+    "args": ["-a", "notas.txt"],
+    "stdin": "Regar las plantas\n",
+    "files": {"notas.txt": "Comprar pan\n"},
+    "stdout": "Líneas añadidas a notas.txt: 1\n",
+    "expect_files": {"notas.txt": "Comprar pan\nRegar las plantas\n"}
+  },
+  {
+    "name": "entrada vacía deja el archivo vacío",
+    "args": ["vacio.txt"],
+    "stdin": "",
+    "files": {"vacio.txt": "algo\n"},
+    "stdout": "Líneas guardadas en vacio.txt: 0\n",
+    "expect_files": {"vacio.txt": ""}
+  },
+  {
+    "name": "carpeta inexistente",
+    "args": ["no/existe/notas.txt"],
+    "stdin": "hola\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: no se puede abrir 'no/existe/notas.txt' para escribir.\n"
+  },
+  {
+    "name": "sin argumentos",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 087 [-a] ARCHIVO\n"
+  }
+]

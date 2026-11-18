@@ -1,0 +1,36 @@
+[
+  {
+    "name": "cuatro hilos",
+    "args": ["4", "100000"],
+    "stdout": "Esperado: 400000\nObtenido: 400000\n"
+  },
+  {
+    "name": "dieciséis hilos",
+    "args": ["16", "20000"],
+    "stdout": "Esperado: 320000\nObtenido: 320000\n"
+  },
+  {
+    "name": "un hilo",
+    "args": ["1", "7"],
+    "stdout": "Esperado: 7\nObtenido: 7\n"
+  },
+  {
+    "name": "cero incrementos",
+    "args": ["3", "0"],
+    "stdout": "Esperado: 0\nObtenido: 0\n"
+  },
+  {
+    "name": "demasiados hilos",
+    "args": ["17", "10"],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 096 HILOS INCREMENTOS (HILOS de 1 a 16, INCREMENTOS de 0 a 1000000)\n"
+  },
+  {
+    "name": "incrementos no numéricos",
+    "args": ["2", "mil"],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 096 HILOS INCREMENTOS (HILOS de 1 a 16, INCREMENTOS de 0 a 1000000)\n"
+  }
+]

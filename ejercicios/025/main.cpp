@@ -1,0 +1,42 @@
+#include <iostream>
+
+struct Marcador {
+    int local = 0;
+    int visitante = 0;
+};
+
+bool esEquipo(char equipo) {
+    return equipo == 'L' || equipo == 'V';
+}
+
+// Antes de llamarla, comprueba que equipo sea 'L' o 'V'.
+int& puntosDe(Marcador& marcador, char equipo) {
+    if (equipo == 'L') {
+        return marcador.local;
+    }
+    return marcador.visitante;
+}
+
+int main() {
+    Marcador marcador;
+    char equipo{};
+    while (std::cin >> equipo) {
+        if (!esEquipo(equipo)) {
+            std::cerr << "Error: equipo desconocido: " << equipo << '\n';
+            return 1;
+        }
+        int puntos{};
+        if (!(std::cin >> puntos)) {
+            std::cerr << "Error: falta la puntuación entera.\n";
+            return 1;
+        }
+        if (puntos < 1 || puntos > 3) {
+            std::cerr << "Error: una canasta vale 1, 2 o 3 puntos.\n";
+            return 1;
+        }
+        puntosDe(marcador, equipo) += puntos;
+    }
+
+    std::cout << "Local " << marcador.local << " - " << marcador.visitante
+              << " Visitante\n";
+}

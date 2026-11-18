@@ -1,0 +1,21 @@
+[
+  {
+    "name": "tres figuras",
+    "stdin": "circulo 1\nrectangulo 2 3\ntriangulo 3 4 5\n",
+    "stdout": "círculo: área 3.14, perímetro 6.28\nrectángulo: área 6.00, perímetro 10.00\ntriángulo: área 6.00, perímetro 12.00\n",
+    "stderr": ""
+  },
+  {
+    "name": "líneas no válidas",
+    "stdin": "triangulo 1 2 3\ncuadrado 2\nrectangulo 0 4\ncirculo 2\n",
+    "status": 1,
+    "stdout": "círculo: área 12.57, perímetro 12.57\n",
+    "stderr": "Línea no válida: triangulo 1 2 3\nLínea no válida: cuadrado 2\nLínea no válida: rectangulo 0 4\n"
+  },
+  {
+    "name": "entrada vacía",
+    "stdin": "",
+    "stdout": "",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "name": "encontrado",
+    "stdin": "30\n",
+    "stdout": "Encontrado en la posición 2.\nPuntos: 12 7 0 7 25\n"
+  },
+  {
+    "name": "primera_aparicion",
+    "stdin": "7\n",
+    "stdout": "Encontrado en la posición 1.\nPuntos: 12 0 30 7 25\n"
+  },
+  {
+    "name": "ultimo",
+    "stdin": "25\n",
+    "stdout": "Encontrado en la posición 4.\nPuntos: 12 7 30 7 0\n"
+  },
+  {
+    "name": "no_encontrado",
+    "stdin": "99\n",
+    "stdout": "No encontrado.\nPuntos: 12 7 30 7 25\n"
+  },
+  {
+    "name": "no_numerico",
+    "stdin": "siete\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: se esperaba un entero.\n"
+  }
+]

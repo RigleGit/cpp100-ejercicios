@@ -1,0 +1,69 @@
+[
+  {
+    "name": "normal",
+    "stdin": "1.10.0 1.2.0 1.9.3 0.9.12 1.9.0\n",
+    "stdout": "0.9.12\n1.2.0\n1.9.0\n1.9.3\n1.10.0\nMás reciente: 1.10.0\n"
+  },
+  {
+    "name": "iguales",
+    "stdin": "2.0.0 1.0.0 2.0.0\n",
+    "stdout": "1.0.0\n2.0.0\n2.0.0\nMás reciente: 2.0.0\n"
+  },
+  {
+    "name": "una versión",
+    "stdin": "3.1.4\n",
+    "stdout": "3.1.4\nMás reciente: 3.1.4\n"
+  },
+  {
+    "name": "ceros a la izquierda",
+    "stdin": "1.02.0 1.1.0\n",
+    "stdout": "1.1.0\n1.2.0\nMás reciente: 1.2.0\n"
+  },
+  {
+    "name": "sin versiones",
+    "stdin": "",
+    "stdout": "Sin versiones.\n"
+  },
+  {
+    "name": "faltan partes",
+    "stdin": "1.2.0 1.2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: versión no válida: 1.2\n"
+  },
+  {
+    "name": "sobran partes",
+    "stdin": "1.2.3.4\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: versión no válida: 1.2.3.4\n"
+  },
+  {
+    "name": "parte vacía",
+    "stdin": "1..3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: versión no válida: 1..3\n"
+  },
+  {
+    "name": "signo negativo",
+    "stdin": "1.-2.3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: versión no válida: 1.-2.3\n"
+  },
+  {
+    "name": "letras",
+    "stdin": "1.2.3-beta\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: versión no válida: 1.2.3-beta\n"
+  },
+  {
+    "name": "desbordamiento",
+    "stdin": "1.2.99999999999\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: versión no válida: 1.2.99999999999\n"
+  }
+]

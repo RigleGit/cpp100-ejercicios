@@ -1,0 +1,57 @@
+[
+  {
+    "name": "archivo normal",
+    "args": ["poema.txt"],
+    "files": {"poema.txt": "Verde que te quiero verde.\n\nVerde viento.\nVerdes ramas.\n"},
+    "stdout": "Líneas: 4\nVacías: 1\nMás larga: línea 1 (26 bytes)\n"
+  },
+  {
+    "name": "última línea sin salto",
+    "args": ["datos.txt"],
+    "files": {"datos.txt": "uno\ndos\ntres"},
+    "stdout": "Líneas: 3\nVacías: 0\nMás larga: línea 3 (4 bytes)\n"
+  },
+  {
+    "name": "finales de línea de Windows",
+    "args": ["win.txt"],
+    "files": {"win.txt": "ab\r\n\r\nabc\r\n"},
+    "stdout": "Líneas: 3\nVacías: 1\nMás larga: línea 3 (3 bytes)\n"
+  },
+  {
+    "name": "empate: gana la primera",
+    "args": ["par.txt"],
+    "files": {"par.txt": "sol\nmar\n"},
+    "stdout": "Líneas: 2\nVacías: 0\nMás larga: línea 1 (3 bytes)\n"
+  },
+  {
+    "name": "se cuentan bytes, no letras",
+    "args": ["acento.txt"],
+    "files": {"acento.txt": "mundo\nadiós\n"},
+    "stdout": "Líneas: 2\nVacías: 0\nMás larga: línea 2 (6 bytes)\n"
+  },
+  {
+    "name": "archivo vacío",
+    "args": ["vacio.txt"],
+    "files": {"vacio.txt": ""},
+    "stdout": "Líneas: 0\nVacías: 0\nMás larga: ninguna\n"
+  },
+  {
+    "name": "solo un salto de línea",
+    "args": ["salto.txt"],
+    "files": {"salto.txt": "\n"},
+    "stdout": "Líneas: 1\nVacías: 1\nMás larga: línea 1 (0 bytes)\n"
+  },
+  {
+    "name": "archivo ausente",
+    "args": ["no-existe.txt"],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: no se puede abrir 'no-existe.txt'.\n"
+  },
+  {
+    "name": "sin argumentos",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 088 ARCHIVO\n"
+  }
+]

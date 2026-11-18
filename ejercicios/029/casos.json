@@ -1,0 +1,33 @@
+[
+  {
+    "name": "palindromo_mayusculas",
+    "stdin": "Radar\n",
+    "stdout": "Al revés: radaR\nEs palíndromo.\n"
+  },
+  {
+    "name": "no_palindromo",
+    "stdin": "perro\n",
+    "stdout": "Al revés: orrep\nNo es palíndromo.\n"
+  },
+  {
+    "name": "una_letra",
+    "stdin": "a\n",
+    "stdout": "Al revés: a\nEs palíndromo.\n"
+  },
+  {
+    "name": "par",
+    "stdin": "abba\n",
+    "stdout": "Al revés: abba\nEs palíndromo.\n"
+  },
+  {
+    "name": "numeros",
+    "stdin": "12321\n",
+    "stdout": "Al revés: 12321\nEs palíndromo.\n"
+  },
+  {
+    "name": "vacio",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: falta la palabra.\n"
+  }
+]

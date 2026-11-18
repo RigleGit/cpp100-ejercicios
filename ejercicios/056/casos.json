@@ -1,0 +1,53 @@
+[
+  {
+    "name": "normal",
+    "stdin": "6 -8\n",
+    "stdout": "6/-8 = -3/4\nNumerador: -3\nDenominador: 4\n"
+  },
+  {
+    "name": "ya normalizada",
+    "stdin": "3 4\n",
+    "stdout": "3/4 = 3/4\nNumerador: 3\nDenominador: 4\n"
+  },
+  {
+    "name": "dos negativos",
+    "stdin": "-10 -4\n",
+    "stdout": "-10/-4 = 5/2\nNumerador: 5\nDenominador: 2\n"
+  },
+  {
+    "name": "numerador cero",
+    "stdin": "0 -5\n",
+    "stdout": "0/-5 = 0/1\nNumerador: 0\nDenominador: 1\n"
+  },
+  {
+    "name": "entera",
+    "stdin": "12 3\n",
+    "stdout": "12/3 = 4/1\nNumerador: 4\nDenominador: 1\n"
+  },
+  {
+    "name": "límites",
+    "stdin": "-1000000 999999\n",
+    "stdout": "-1000000/999999 = -1000000/999999\nNumerador: -1000000\nDenominador: 999999\n"
+  },
+  {
+    "name": "denominador cero",
+    "stdin": "5 0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el denominador no puede ser cero.\n"
+  },
+  {
+    "name": "fuera de rango",
+    "stdin": "1000001 2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe numerador y denominador (de -1000000 a 1000000).\n"
+  },
+  {
+    "name": "no numérico",
+    "stdin": "1 dos\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe numerador y denominador (de -1000000 a 1000000).\n"
+  }
+]

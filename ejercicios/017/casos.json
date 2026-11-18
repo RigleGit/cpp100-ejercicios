@@ -1,0 +1,33 @@
+[
+  {
+    "name": "normal",
+    "stdin": "1234.567\n",
+    "stdout": "1234.57 €\n1235 €\n1234.567 USD\n",
+    "stderr": ""
+  },
+  {
+    "name": "cero",
+    "stdin": "0\n",
+    "stdout": "0.00 €\n0 €\n0.000 USD\n",
+    "stderr": ""
+  },
+  {
+    "name": "negativa",
+    "stdin": "-3.25\n",
+    "stdout": "-3.25 €\n-3 €\n-3.250 USD\n",
+    "stderr": ""
+  },
+  {
+    "name": "no_numerica",
+    "stdin": "doce\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: se esperaba una cantidad.\n"
+  },
+  {
+    "name": "empate_al_par",
+    "stdin": "2.5\n",
+    "stdout": "2.50 €\n2 €\n2.500 USD\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "name": "figuras",
+    "stdout": "círculo: área 3.14\nrectángulo: área 6.00\ntriángulo: área 6.00\nÁrea total: 15.14\ncopia de figura: área 0.00\n",
+    "stderr": ""
+  }
+]

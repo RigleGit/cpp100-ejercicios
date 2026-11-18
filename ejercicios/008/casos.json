@@ -1,0 +1,32 @@
+[
+  {
+    "name": "par_positivo",
+    "stdin": "4\n",
+    "stdout": "Paridad: par\nSigno: positivo\n",
+    "stderr": ""
+  },
+  {
+    "name": "impar_negativo",
+    "stdin": "-7\n",
+    "stdout": "Paridad: impar\nSigno: negativo\n",
+    "stderr": ""
+  },
+  {
+    "name": "cero",
+    "stdin": "0\n",
+    "stdout": "Paridad: par\nSigno: cero\n",
+    "stderr": ""
+  },
+  {
+    "name": "par_negativo",
+    "stdin": "-2\n",
+    "stdout": "Paridad: par\nSigno: negativo\n",
+    "stderr": ""
+  },
+  {
+    "name": "impar_positivo",
+    "stdin": "7\n",
+    "stdout": "Paridad: impar\nSigno: positivo\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "name": "normal",
+    "stdin": "17 5\n",
+    "stdout": "Cociente: 3\nResto: 2\nComprobación: 3 * 5 + 2 = 17\n",
+    "stderr": ""
+  },
+  {
+    "name": "dividendo_negativo",
+    "stdin": "-17 5\n",
+    "stdout": "Cociente: -3\nResto: -2\nComprobación: -3 * 5 + -2 = -17\n",
+    "stderr": ""
+  },
+  {
+    "name": "divisor_negativo",
+    "stdin": "17 -5\n",
+    "stdout": "Cociente: -3\nResto: 2\nComprobación: -3 * -5 + 2 = 17\n",
+    "stderr": ""
+  },
+  {
+    "name": "dividendo_menor",
+    "stdin": "4 7\n",
+    "stdout": "Cociente: 0\nResto: 4\nComprobación: 0 * 7 + 4 = 4\n",
+    "stderr": ""
+  },
+  {
+    "name": "exacta",
+    "stdin": "20 5\n",
+    "stdout": "Cociente: 4\nResto: 0\nComprobación: 4 * 5 + 0 = 20\n",
+    "stderr": ""
+  },
+  {
+    "name": "divisor_cero",
+    "stdin": "5 0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el divisor no puede ser 0.\n"
+  },
+  {
+    "name": "fuera_de_limite",
+    "stdin": "2000000 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: los valores deben estar entre -1000000 y 1000000.\n"
+  },
+  {
+    "name": "falta_dato",
+    "stdin": "5\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: se esperaban dos enteros.\n"
+  },
+  {
+    "name": "valores_en_limite",
+    "stdin": "-1000000 1000000\n",
+    "stdout": "Cociente: -1\nResto: 0\nComprobación: -1 * 1000000 + 0 = -1000000\n",
+    "stderr": ""
+  },
+  {
+    "name": "dividendo_bajo_limite",
+    "stdin": "-1000001 1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: los valores deben estar entre -1000000 y 1000000.\n"
+  }
+]

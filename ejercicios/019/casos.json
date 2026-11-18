@@ -1,0 +1,65 @@
+[
+  {
+    "name": "normal",
+    "stdin": "48 18\n",
+    "stdout": "MCD: 6\nMCM: 144\n",
+    "stderr": ""
+  },
+  {
+    "name": "orden_inverso",
+    "stdin": "18 48\n",
+    "stdout": "MCD: 6\nMCM: 144\n",
+    "stderr": ""
+  },
+  {
+    "name": "coprimos",
+    "stdin": "17 13\n",
+    "stdout": "MCD: 1\nMCM: 221\n",
+    "stderr": ""
+  },
+  {
+    "name": "uno_es_cero",
+    "stdin": "0 15\n",
+    "stdout": "MCD: 15\nMCM: 0\n",
+    "stderr": ""
+  },
+  {
+    "name": "ambos_cero",
+    "stdin": "0 0\n",
+    "stdout": "MCD: 0\nMCM: 0\n",
+    "stderr": ""
+  },
+  {
+    "name": "iguales",
+    "stdin": "12 12\n",
+    "stdout": "MCD: 12\nMCM: 12\n",
+    "stderr": ""
+  },
+  {
+    "name": "grandes",
+    "stdin": "1000000000 999999999\n",
+    "stdout": "MCD: 1\nMCM: 999999999000000000\n",
+    "stderr": ""
+  },
+  {
+    "name": "negativo",
+    "stdin": "-4 6\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: los números deben estar entre 0 y 1000000000.\n"
+  },
+  {
+    "name": "supera_limite",
+    "stdin": "1000000001 2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: los números deben estar entre 0 y 1000000000.\n"
+  },
+  {
+    "name": "no_numerico",
+    "stdin": "x 4\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: se esperaban dos enteros.\n"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "misma_linea",
+    "stdin": "Ana 19\n",
+    "stdout": "Hola, Ana. El año que viene tendrás 20 años.\n",
+    "stderr": ""
+  },
+  {
+    "name": "lineas_separadas",
+    "stdin": "Luis\n30\n",
+    "stdout": "Hola, Luis. El año que viene tendrás 31 años.\n",
+    "stderr": ""
+  },
+  {
+    "name": "edad_alta",
+    "stdin": "Leo 99\n",
+    "stdout": "Hola, Leo. El año que viene tendrás 100 años.\n",
+    "stderr": ""
+  }
+]

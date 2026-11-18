@@ -1,0 +1,31 @@
+[
+  {
+    "name": "dos lugares",
+    "stdin": "casa 0 0\nfaro 3 -4\n",
+    "stdout": "Nombres: [casa, faro]\nPuntos: [(0, 0), (3, -4)]\n"
+  },
+  {
+    "name": "un lugar y líneas en blanco",
+    "stdin": "\nplaza 12 7\n\n",
+    "stdout": "Nombres: [plaza]\nPuntos: [(12, 7)]\n"
+  },
+  {
+    "name": "sin lugares",
+    "stdin": "",
+    "stdout": "Nombres: []\nPuntos: []\n"
+  },
+  {
+    "name": "coordenada que falta",
+    "stdin": "casa 0 0\nfaro 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la línea 2 no tiene la forma NOMBRE X Y.\n"
+  },
+  {
+    "name": "coordenada no entera",
+    "stdin": "faro 3 norte\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la línea 1 no tiene la forma NOMBRE X Y.\n"
+  }
+]

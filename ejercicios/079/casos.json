@@ -1,0 +1,95 @@
+[
+  {
+    "name": "normal",
+    "args": [
+      "normal"
+    ],
+    "stdin": "2 10 30\n",
+    "stdout": "Paquete 1 (2 kg): 5 euros\nPaquete 2 (10 kg): 13 euros\nPaquete 3 (30 kg): 33 euros\nTotal con clases: 51 euros\nTotal con lambdas: 51 euros\n",
+    "stderr": ""
+  },
+  {
+    "name": "urgente",
+    "args": [
+      "urgente"
+    ],
+    "stdin": "2 10 30\n",
+    "stdout": "Paquete 1 (2 kg): 10 euros\nPaquete 2 (10 kg): 26 euros\nPaquete 3 (30 kg): 66 euros\nTotal con clases: 102 euros\nTotal con lambdas: 102 euros\n",
+    "stderr": ""
+  },
+  {
+    "name": "plana",
+    "args": [
+      "plana"
+    ],
+    "stdin": "2 10 30\n",
+    "stdout": "Paquete 1 (2 kg): 8 euros\nPaquete 2 (10 kg): 8 euros\nPaquete 3 (30 kg): 8 euros\nTotal con clases: 24 euros\nTotal con lambdas: 24 euros\n",
+    "stderr": ""
+  },
+  {
+    "name": "sin paquetes",
+    "args": [
+      "normal"
+    ],
+    "stdin": "",
+    "stdout": "Total con clases: 0 euros\nTotal con lambdas: 0 euros\n",
+    "stderr": ""
+  },
+  {
+    "name": "peso fuera de rango",
+    "args": [
+      "normal"
+    ],
+    "stdin": "2 31\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: cada paquete pesa de 1 a 30 kilos.\n"
+  },
+  {
+    "name": "peso cero",
+    "args": [
+      "plana"
+    ],
+    "stdin": "0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: cada paquete pesa de 1 a 30 kilos.\n"
+  },
+  {
+    "name": "peso no numérico",
+    "args": [
+      "normal"
+    ],
+    "stdin": "2 dos\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la entrada solo puede tener enteros.\n"
+  },
+  {
+    "name": "signo suelto al final sin salto",
+    "args": [
+      "normal"
+    ],
+    "stdin": "2 -",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la entrada solo puede tener enteros.\n"
+  },
+  {
+    "name": "tarifa desconocida",
+    "args": [
+      "express"
+    ],
+    "stdin": "2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 079 normal|urgente|plana.\n"
+  },
+  {
+    "name": "sin tarifa",
+    "stdin": "2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 079 normal|urgente|plana.\n"
+  }
+]

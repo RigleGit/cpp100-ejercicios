@@ -1,0 +1,38 @@
+[
+  {
+    "name": "tres tipos",
+    "stdin": "entero 3 7\ndecimal 2.5 -1\ntexto pera manzana\n",
+    "stdout": "entero: 7\ndecimal: 2.5\ntexto: pera\n"
+  },
+  {
+    "name": "negativos, empate y mayúsculas",
+    "stdin": "entero -8 -3\nentero 4 4\ntexto Zorro abeja\n",
+    "stdout": "entero: -3\nentero: 4\ntexto: abeja\n"
+  },
+  {
+    "name": "líneas en blanco y entrada vacía",
+    "stdin": "\n   \n",
+    "stdout": ""
+  },
+  {
+    "name": "decimal donde se espera un entero",
+    "stdin": "entero 1 2\nentero 3.5 2\n",
+    "status": 1,
+    "stdout": "entero: 2\n",
+    "stderr": "Error: la línea 2 no tiene la forma TIPO A B.\n"
+  },
+  {
+    "name": "tipo desconocido",
+    "stdin": "fecha 1 2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la línea 1 no tiene la forma TIPO A B.\n"
+  },
+  {
+    "name": "valor de más",
+    "stdin": "texto a b c\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la línea 1 no tiene la forma TIPO A B.\n"
+  }
+]

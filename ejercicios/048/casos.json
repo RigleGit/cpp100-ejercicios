@@ -1,0 +1,59 @@
+[
+  {
+    "name": "normal",
+    "stdin": "7 + 3\n7 - 10\n6 * 7\n-7 / 2\n4 max 9\n",
+    "stdout": "7 + 3 = 10\n7 - 10 = -3\n6 * 7 = 42\n-7 / 2 = -3\n4 max 9 = 9\n"
+  },
+  {
+    "name": "sin líneas",
+    "stdin": "",
+    "stdout": ""
+  },
+  {
+    "name": "división entre cero",
+    "stdin": "8 / 4\n8 / 0\n1 + 1\n",
+    "status": 1,
+    "stdout": "8 / 4 = 2\n",
+    "stderr": "Error en la línea 2: división entre cero.\n"
+  },
+  {
+    "name": "operación desconocida",
+    "stdin": "2 + 2\n2 ^ 3\n",
+    "status": 1,
+    "stdout": "2 + 2 = 4\n",
+    "stderr": "Error en la línea 2: operación desconocida: ^\n"
+  },
+  {
+    "name": "falta un operando",
+    "stdin": "2 +\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error en la línea 1: usa «a operación b» con enteros entre -10000 y 10000.\n"
+  },
+  {
+    "name": "sobra texto",
+    "stdin": "2 + 3 4\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error en la línea 1: usa «a operación b» con enteros entre -10000 y 10000.\n"
+  },
+  {
+    "name": "línea vacía",
+    "stdin": "2 + 3\n\n",
+    "status": 1,
+    "stdout": "2 + 3 = 5\n",
+    "stderr": "Error en la línea 2: usa «a operación b» con enteros entre -10000 y 10000.\n"
+  },
+  {
+    "name": "fuera de rango",
+    "stdin": "20000 * 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error en la línea 1: usa «a operación b» con enteros entre -10000 y 10000.\n"
+  },
+  {
+    "name": "sin salto final",
+    "stdin": "5 max -5",
+    "stdout": "5 max -5 = 5\n"
+  }
+]

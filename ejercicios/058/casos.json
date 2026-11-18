@@ -1,0 +1,48 @@
+[
+  {
+    "name": "normal",
+    "stdin": "1 2 1 3\n",
+    "stdout": "1/2 + 1/3 = 5/6\n1/2 == 1/3: no\n"
+  },
+  {
+    "name": "iguales tras normalizar",
+    "stdin": "2 4 -3 -6\n",
+    "stdout": "1/2 + 1/2 = 1/1\n1/2 == 1/2: sí\n"
+  },
+  {
+    "name": "suma cero",
+    "stdin": "1 2 -1 2\n",
+    "stdout": "1/2 + -1/2 = 0/1\n1/2 == -1/2: no\n"
+  },
+  {
+    "name": "signos",
+    "stdin": "3 -4 1 4\n",
+    "stdout": "-3/4 + 1/4 = -1/2\n-3/4 == 1/4: no\n"
+  },
+  {
+    "name": "límites",
+    "stdin": "1000000 999999 999999 1000000\n",
+    "stdout": "1000000/999999 + 999999/1000000 = 1999998000001/999999000000\n1000000/999999 == 999999/1000000: no\n"
+  },
+  {
+    "name": "denominador cero",
+    "stdin": "1 2 3 0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el denominador no puede ser cero.\n"
+  },
+  {
+    "name": "fuera de rango",
+    "stdin": "1 2 3 -1000001\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe dos fracciones como cuatro enteros (de -1000000 a 1000000).\n"
+  },
+  {
+    "name": "faltan datos",
+    "stdin": "1 2 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe dos fracciones como cuatro enteros (de -1000000 a 1000000).\n"
+  }
+]

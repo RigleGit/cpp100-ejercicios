@@ -1,0 +1,28 @@
+[
+  {
+    "name": "transferencias correctas",
+    "stdin": "ana eva 30\neva luis 20\n",
+    "stdout": "ana -> eva: 30\neva -> luis: 20\nSaldos: ana=70 eva=10 luis=970\n",
+    "stderr": ""
+  },
+  {
+    "name": "el destino no admite el ingreso",
+    "stdin": "ana luis 80\n",
+    "status": 1,
+    "stdout": "Saldos: ana=100 eva=0 luis=950\n",
+    "stderr": "ana luis 80: el destino superaría el máximo\n"
+  },
+  {
+    "name": "errores sin cambios",
+    "stdin": "ana eva 500\nana pepe 10\nana ana 5\nana eva -3\nana eva\nana eva 10 extra\nana luis 50\n",
+    "status": 1,
+    "stdout": "ana -> luis: 50\nSaldos: ana=50 eva=0 luis=1000\n",
+    "stderr": "ana eva 500: saldo insuficiente\nana pepe 10: no existe la cuenta pepe\nana ana 5: origen y destino coinciden\nana eva -3: la cantidad debe ser positiva\nana eva: formato ORIGEN DESTINO CANTIDAD\nana eva 10 extra: formato ORIGEN DESTINO CANTIDAD\n"
+  },
+  {
+    "name": "sin operaciones",
+    "stdin": "",
+    "stdout": "Saldos: ana=100 eva=0 luis=950\n",
+    "stderr": ""
+  }
+]

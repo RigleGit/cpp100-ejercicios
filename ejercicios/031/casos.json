@@ -1,0 +1,88 @@
+[
+  {
+    "name": "normal",
+    "args": [
+      "el",
+      "un"
+    ],
+    "stdin": "el gato y el perro\nel fin\n",
+    "stdout": "un gato y un perro\nun fin\nReemplazos: 3\n"
+  },
+  {
+    "name": "sin_coincidencias",
+    "args": [
+      "xyz",
+      "a"
+    ],
+    "stdin": "hola\n",
+    "stdout": "hola\nReemplazos: 0\n"
+  },
+  {
+    "name": "reemplazo_contiene_buscado",
+    "args": [
+      "a",
+      "aa"
+    ],
+    "stdin": "banana\n",
+    "stdout": "baanaanaa\nReemplazos: 3\n"
+  },
+  {
+    "name": "borrar",
+    "args": [
+      "-",
+      ""
+    ],
+    "stdin": "a-b-c\n",
+    "stdout": "abc\nReemplazos: 2\n"
+  },
+  {
+    "name": "solapadas",
+    "args": [
+      "aa",
+      "b"
+    ],
+    "stdin": "aaa\n",
+    "stdout": "ba\nReemplazos: 1\n"
+  },
+  {
+    "name": "buscado_vacio",
+    "args": [
+      "",
+      "x"
+    ],
+    "stdin": "hola\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el texto buscado no puede estar vacío.\n"
+  },
+  {
+    "name": "faltan_argumentos",
+    "args": [
+      "a"
+    ],
+    "stdin": "hola\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: indica el texto buscado y su reemplazo.\n"
+  },
+  {
+    "name": "sin_texto",
+    "args": [
+      "a",
+      "b"
+    ],
+    "stdout": "Reemplazos: 0\n"
+  },
+  {
+    "name": "sobra_argumento",
+    "args": [
+      "a",
+      "b",
+      "c"
+    ],
+    "stdin": "hola\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: indica el texto buscado y su reemplazo.\n"
+  }
+]

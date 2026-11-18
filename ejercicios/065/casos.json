@@ -1,0 +1,33 @@
+[
+  {
+    "name": "con weak_ptr",
+    "args": [
+      "debil"
+    ],
+    "stdout": "Construye A\nConstruye B\nDueños de A: 1, dueños de B: 2\nB llega a A a través del weak_ptr\nFin del bloque\nDestruye A\nDestruye B\nA liberado: sí\n",
+    "stderr": ""
+  },
+  {
+    "name": "ciclo de shared_ptr",
+    "args": [
+      "fuerte"
+    ],
+    "stdout": "Construye A\nConstruye B\nDueños de A: 2, dueños de B: 2\nFin del bloque\nA liberado: no\n",
+    "stderr": ""
+  },
+  {
+    "name": "sin modo",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 065 debil|fuerte.\n"
+  },
+  {
+    "name": "modo desconocido",
+    "args": [
+      "otro"
+    ],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 065 debil|fuerte.\n"
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "name": "normal",
+    "stdin": "3\n  Ana María  \n\tLuis\nPepe\n",
+    "stdout": "1: [Ana María]\n2: [Luis]\n3: [Pepe]\n"
+  },
+  {
+    "name": "linea_en_blanco",
+    "stdin": "2\n   \nEva\n",
+    "stdout": "1: (vacía)\n2: [Eva]\n"
+  },
+  {
+    "name": "cero",
+    "stdin": "0\n",
+    "stdout": ""
+  },
+  {
+    "name": "crlf",
+    "stdin": "1\r\n  Ana  \r\n",
+    "stdout": "1: [Ana]\n"
+  },
+  {
+    "name": "faltan_lineas",
+    "stdin": "3\nAna\nLuis\n",
+    "status": 1,
+    "stdout": "1: [Ana]\n2: [Luis]\n",
+    "stderr": "Error: se esperaban 3 líneas y llegaron 2.\n"
+  },
+  {
+    "name": "negativo",
+    "stdin": "-2\nAna\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la primera línea debe ser un entero no negativo.\n"
+  },
+  {
+    "name": "no_numerico",
+    "stdin": "dos\nAna\nLuis\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la primera línea debe ser un entero no negativo.\n"
+  }
+]

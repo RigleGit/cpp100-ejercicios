@@ -1,0 +1,79 @@
+[
+  {
+    "name": "bisiesto",
+    "stdin": "2024 2\n",
+    "stdout": "El mes 2 de 2024 tiene 29 días.\nEl año 2024 tiene 366 días.\n",
+    "stderr": ""
+  },
+  {
+    "name": "no_bisiesto",
+    "stdin": "2023 2\n",
+    "stdout": "El mes 2 de 2023 tiene 28 días.\nEl año 2023 tiene 365 días.\n",
+    "stderr": ""
+  },
+  {
+    "name": "siglo_no_bisiesto",
+    "stdin": "1900 2\n",
+    "stdout": "El mes 2 de 1900 tiene 28 días.\nEl año 1900 tiene 365 días.\n",
+    "stderr": ""
+  },
+  {
+    "name": "siglo_bisiesto",
+    "stdin": "2000 2\n",
+    "stdout": "El mes 2 de 2000 tiene 29 días.\nEl año 2000 tiene 366 días.\n",
+    "stderr": ""
+  },
+  {
+    "name": "treinta",
+    "stdin": "2025 4\n",
+    "stdout": "El mes 4 de 2025 tiene 30 días.\nEl año 2025 tiene 365 días.\n",
+    "stderr": ""
+  },
+  {
+    "name": "treinta_y_uno",
+    "stdin": "2025 12\n",
+    "stdout": "El mes 12 de 2025 tiene 31 días.\nEl año 2025 tiene 365 días.\n",
+    "stderr": ""
+  },
+  {
+    "name": "mes_trece",
+    "stdin": "2025 13\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el mes debe estar entre 1 y 12.\n"
+  },
+  {
+    "name": "mes_cero",
+    "stdin": "2025 0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el mes debe estar entre 1 y 12.\n"
+  },
+  {
+    "name": "anio_cero",
+    "stdin": "0 5\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el año debe estar entre 1 y 9999.\n"
+  },
+  {
+    "name": "no_numerico",
+    "stdin": "dos mil\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: se esperaban el año y el mes.\n"
+  },
+  {
+    "name": "anio_maximo",
+    "stdin": "9999 12\n",
+    "stdout": "El mes 12 de 9999 tiene 31 días.\nEl año 9999 tiene 365 días.\n",
+    "stderr": ""
+  },
+  {
+    "name": "anio_grande",
+    "stdin": "10000 1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el año debe estar entre 1 y 9999.\n"
+  }
+]

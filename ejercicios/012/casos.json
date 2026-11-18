@@ -1,0 +1,73 @@
+[
+  {
+    "name": "normal",
+    "stdin": "3 5 -2 0\n",
+    "stdout": "Números sumados: 3\nSuma: 6\n",
+    "stderr": ""
+  },
+  {
+    "name": "solo_centinela",
+    "stdin": "0\n",
+    "stdout": "Números sumados: 0\nSuma: 0\n",
+    "stderr": ""
+  },
+  {
+    "name": "suma_cero",
+    "stdin": "-3 3 0\n",
+    "stdout": "Números sumados: 2\nSuma: 0\n",
+    "stderr": ""
+  },
+  {
+    "name": "ignora_tras_centinela",
+    "stdin": "1 2 0 99\n",
+    "stdout": "Números sumados: 2\nSuma: 3\n",
+    "stderr": ""
+  },
+  {
+    "name": "sin_salto_final",
+    "stdin": "4 6 0",
+    "stdout": "Números sumados: 2\nSuma: 10\n",
+    "stderr": ""
+  },
+  {
+    "name": "sin_centinela",
+    "stdin": "3 5\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la entrada terminó sin el 0 final.\n"
+  },
+  {
+    "name": "vacia",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la entrada terminó sin el 0 final.\n"
+  },
+  {
+    "name": "dato_no_numerico",
+    "stdin": "4 x 0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: dato no válido; se esperaba un entero.\n"
+  },
+  {
+    "name": "fuera_de_int",
+    "stdin": "99999999999 0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: dato no válido; se esperaba un entero.\n"
+  },
+  {
+    "name": "signo_al_final",
+    "stdin": "1 2 -\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: dato no válido; se esperaba un entero.\n"
+  },
+  {
+    "name": "sin_centinela_con_blancos",
+    "stdin": "3 5 \n\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la entrada terminó sin el 0 final.\n"
+  }
+]

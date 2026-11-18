@@ -1,0 +1,81 @@
+[
+  {
+    "name": "copia de texto",
+    "args": [
+      "entrada.txt",
+      "salida.txt"
+    ],
+    "files": {
+      "entrada.txt": "hola\nmundo\n"
+    },
+    "stdout": "Copiados 11 bytes\n",
+    "stderr": "",
+    "expect_files": {
+      "salida.txt": "hola\nmundo\n",
+      "entrada.txt": "hola\nmundo\n"
+    }
+  },
+  {
+    "name": "origen vacío",
+    "args": [
+      "vacio.txt",
+      "copia.txt"
+    ],
+    "files": {
+      "vacio.txt": ""
+    },
+    "stdout": "Copiados 0 bytes\n",
+    "stderr": "",
+    "expect_files": {
+      "copia.txt": ""
+    }
+  },
+  {
+    "name": "sobrescribe el destino",
+    "args": [
+      "a.txt",
+      "b.txt"
+    ],
+    "files": {
+      "a.txt": "nuevo\n",
+      "b.txt": "contenido antiguo y más largo\n"
+    },
+    "stdout": "Copiados 6 bytes\n",
+    "stderr": "",
+    "expect_files": {
+      "b.txt": "nuevo\n"
+    }
+  },
+  {
+    "name": "origen ausente",
+    "args": [
+      "no-existe.txt",
+      "salida.txt"
+    ],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: no se puede abrir no-existe.txt.\n"
+  },
+  {
+    "name": "destino en carpeta inexistente",
+    "args": [
+      "entrada.txt",
+      "falta/salida.txt"
+    ],
+    "files": {
+      "entrada.txt": "hola\n"
+    },
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: no se puede crear falta/salida.txt.\n",
+    "expect_files": {
+      "entrada.txt": "hola\n"
+    }
+  },
+  {
+    "name": "sin argumentos",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 063 ORIGEN DESTINO.\n"
+  }
+]

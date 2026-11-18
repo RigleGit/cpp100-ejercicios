@@ -1,0 +1,57 @@
+[
+  {
+    "name": "enteros",
+    "args": ["enteros"],
+    "stdin": "4 -2 7\n1\n",
+    "stdout": "Cantidad: 4\nSuma: 10\nMedia: 2.5\n"
+  },
+  {
+    "name": "decimales",
+    "args": ["decimales"],
+    "stdin": "2.5 0.25 -1\n",
+    "stdout": "Cantidad: 3\nSuma: 1.75\nMedia: 0.583333\n"
+  },
+  {
+    "name": "sin valores",
+    "args": ["enteros"],
+    "stdin": "",
+    "stdout": "Cantidad: 0\nSuma: 0\nMedia: no definida\n"
+  },
+  {
+    "name": "decimal en modo enteros",
+    "args": ["enteros"],
+    "stdin": "3 2.5\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: '2.5' no es un número válido.\n"
+  },
+  {
+    "name": "infinito rechazado",
+    "args": ["decimales"],
+    "stdin": "1 inf\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: 'inf' no es un número válido.\n"
+  },
+  {
+    "name": "entero fuera de rango",
+    "args": ["enteros"],
+    "stdin": "99999999999999999999\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: '99999999999999999999' no es un número válido.\n"
+  },
+  {
+    "name": "modo desconocido",
+    "args": ["fracciones"],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 083 enteros|decimales\n"
+  },
+  {
+    "name": "sin modo",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 083 enteros|decimales\n"
+  }
+]

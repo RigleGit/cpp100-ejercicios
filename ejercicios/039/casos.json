@@ -1,0 +1,55 @@
+[
+  {
+    "name": "normal",
+    "stdin": "2 3\n1 2 3\n4 5 6\n",
+    "stdout": "Traspuesta (3x2):\n1 4\n2 5\n3 6\n"
+  },
+  {
+    "name": "fila",
+    "stdin": "1 4\n7 8 9 10\n",
+    "stdout": "Traspuesta (4x1):\n7\n8\n9\n10\n"
+  },
+  {
+    "name": "columna",
+    "stdin": "3 1\n1\n2\n3\n",
+    "stdout": "Traspuesta (1x3):\n1 2 3\n"
+  },
+  {
+    "name": "uno",
+    "stdin": "1 1\n-5\n",
+    "stdout": "Traspuesta (1x1):\n-5\n"
+  },
+  {
+    "name": "cuadrada",
+    "stdin": "2 2\n1 2\n3 4\n",
+    "stdout": "Traspuesta (2x2):\n1 3\n2 4\n"
+  },
+  {
+    "name": "cero_filas",
+    "stdin": "0 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: filas y columnas van de 1 a 10.\n"
+  },
+  {
+    "name": "demasiadas",
+    "stdin": "11 1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: filas y columnas van de 1 a 10.\n"
+  },
+  {
+    "name": "faltan_valores",
+    "stdin": "2 2\n1 2 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan valores de la matriz.\n"
+  },
+  {
+    "name": "celda_no_numerica",
+    "stdin": "2 2\n1 x 3 4\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan valores de la matriz.\n"
+  }
+]

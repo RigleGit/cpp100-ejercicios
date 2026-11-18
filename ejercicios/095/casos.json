@@ -1,0 +1,48 @@
+[
+  {
+    "name": "diez números en cuatro hilos",
+    "args": ["10", "4"],
+    "stdout": "Hilo 1: 1..3 = 6\nHilo 2: 4..6 = 15\nHilo 3: 7..8 = 15\nHilo 4: 9..10 = 19\nTotal: 55\nFórmula: 55\n"
+  },
+  {
+    "name": "un millón en ocho hilos",
+    "args": ["1000000", "8"],
+    "stdout": "Hilo 1: 1..125000 = 7812562500\nHilo 2: 125001..250000 = 23437562500\nHilo 3: 250001..375000 = 39062562500\nHilo 4: 375001..500000 = 54687562500\nHilo 5: 500001..625000 = 70312562500\nHilo 6: 625001..750000 = 85937562500\nHilo 7: 750001..875000 = 101562562500\nHilo 8: 875001..1000000 = 117187562500\nTotal: 500000500000\nFórmula: 500000500000\n"
+  },
+  {
+    "name": "más hilos que números",
+    "args": ["2", "3"],
+    "stdout": "Hilo 1: 1..1 = 1\nHilo 2: 2..2 = 2\nHilo 3: sin elementos\nTotal: 3\nFórmula: 3\n"
+  },
+  {
+    "name": "cero números",
+    "args": ["0", "2"],
+    "stdout": "Hilo 1: sin elementos\nHilo 2: sin elementos\nTotal: 0\nFórmula: 0\n"
+  },
+  {
+    "name": "un solo hilo",
+    "args": ["5", "1"],
+    "stdout": "Hilo 1: 1..5 = 15\nTotal: 15\nFórmula: 15\n"
+  },
+  {
+    "name": "cero hilos",
+    "args": ["10", "0"],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 095 N HILOS (N de 0 a 1000000, HILOS de 1 a 16)\n"
+  },
+  {
+    "name": "N negativo",
+    "args": ["-5", "2"],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 095 N HILOS (N de 0 a 1000000, HILOS de 1 a 16)\n"
+  },
+  {
+    "name": "faltan argumentos",
+    "args": ["10"],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 095 N HILOS (N de 0 a 1000000, HILOS de 1 a 16)\n"
+  }
+]

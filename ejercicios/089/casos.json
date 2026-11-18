@@ -1,0 +1,51 @@
+[
+  {
+    "name": "notas válidas",
+    "args": ["notas.csv"],
+    "files": {"notas.csv": "Ana,7,8.5,9\nLuis,5,4\nMarta García, 10 ,6.5\n"},
+    "stdout": "Ana: 8.17\nLuis: 4.50\nMarta García: 8.25\nAlumnos: 3\nMedia del grupo: 6.97\n",
+    "stderr": ""
+  },
+  {
+    "name": "líneas mal formadas",
+    "args": ["notas.csv"],
+    "files": {"notas.csv": "Ana,7,8\n,5,6\nLuis\nEva,siete\nPablo,11\nSara,6,\n\nIker,6.5,7.5\n"},
+    "stdout": "Ana: 7.50\nIker: 7.00\nAlumnos: 2\nMedia del grupo: 7.25\n",
+    "stderr": "Aviso: línea 2 ignorada: falta el nombre.\nAviso: línea 3 ignorada: no tiene notas.\nAviso: línea 4 ignorada: 'siete' no es una nota.\nAviso: línea 5 ignorada: '11' está fuera de 0..10.\nAviso: línea 6 ignorada: '' no es una nota.\n"
+  },
+  {
+    "name": "decimal con coma",
+    "args": ["notas.csv"],
+    "files": {"notas.csv": "Ana,7,5\nLuis,\"6,5\"\n"},
+    "stdout": "Ana: 6.00\nAlumnos: 1\nMedia del grupo: 6.00\n",
+    "stderr": "Aviso: línea 2 ignorada: '\"6' no es una nota.\n"
+  },
+  {
+    "name": "finales de línea de Windows",
+    "args": ["notas.csv"],
+    "files": {"notas.csv": "Ana,10,9\r\nLuis,0\r\n"},
+    "stdout": "Ana: 9.50\nLuis: 0.00\nAlumnos: 2\nMedia del grupo: 4.75\n",
+    "stderr": ""
+  },
+  {
+    "name": "archivo vacío",
+    "args": ["notas.csv"],
+    "files": {"notas.csv": ""},
+    "stdout": "Alumnos: 0\nMedia del grupo: sin datos\n",
+    "stderr": ""
+  },
+  {
+    "name": "archivo ausente",
+    "args": ["notas.csv"],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: no se puede abrir 'notas.csv'.\n"
+  },
+  {
+    "name": "inf y nan no son notas",
+    "args": ["notas.csv"],
+    "files": {"notas.csv": "Ana,nan\nLuis,inf\nEva,7,8\n"},
+    "stdout": "Eva: 7.50\nAlumnos: 1\nMedia del grupo: 7.50\n",
+    "stderr": "Aviso: línea 1 ignorada: 'nan' no es una nota.\nAviso: línea 2 ignorada: 'inf' no es una nota.\n"
+  }
+]

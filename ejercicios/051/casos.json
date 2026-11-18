@@ -1,0 +1,79 @@
+[
+  {
+    "name": "normal",
+    "stdin": "5 1 2 9 2\n9 4 2 7\n",
+    "stdout": "A: 1 2 5 9\nB: 2 4 7 9\nComunes: 2 9\n"
+  },
+  {
+    "name": "sin comunes",
+    "stdin": "1 3 5\n2 4 6\n",
+    "stdout": "A: 1 3 5\nB: 2 4 6\nComunes: (vacío)\n"
+  },
+  {
+    "name": "línea vacía",
+    "stdin": "\n1 2 3\n",
+    "stdout": "A: (vacío)\nB: 1 2 3\nComunes: (vacío)\n"
+  },
+  {
+    "name": "ambas vacías",
+    "stdin": "\n\n",
+    "stdout": "A: (vacío)\nB: (vacío)\nComunes: (vacío)\n"
+  },
+  {
+    "name": "negativos",
+    "stdin": "-3 0 3\n3 -3 -3\n",
+    "stdout": "A: -3 0 3\nB: -3 3\nComunes: -3 3\n"
+  },
+  {
+    "name": "segunda sin salto final",
+    "stdin": "1 2\n2 3",
+    "stdout": "A: 1 2\nB: 2 3\nComunes: 2\n"
+  },
+  {
+    "name": "número pegado a letras",
+    "stdin": "1 2x\n3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe dos líneas de números enteros.\n"
+  },
+  {
+    "name": "falta la segunda línea",
+    "stdin": "1 2 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe dos líneas de números enteros.\n"
+  },
+  {
+    "name": "número no válido",
+    "stdin": "1 dos 3\n4 5\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe dos líneas de números enteros.\n"
+  },
+  {
+    "name": "número que no cabe en int",
+    "stdin": "1 99999999999\n2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe dos líneas de números enteros.\n"
+  },
+  {
+    "name": "signo suelto al final",
+    "stdin": "1 -\n2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe dos líneas de números enteros.\n"
+  },
+  {
+    "name": "espacios al final",
+    "stdin": "1 2  \n 2 3\t\n",
+    "stdout": "A: 1 2\nB: 2 3\nComunes: 2\n"
+  },
+  {
+    "name": "sin entrada",
+    "stdin": "",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe dos líneas de números enteros.\n"
+  }
+]

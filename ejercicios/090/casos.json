@@ -1,0 +1,104 @@
+[
+  {
+    "name": "contenido binario",
+    "args": [
+      "foto.bin",
+      "copia.bin"
+    ],
+    "files": {
+      "foto.bin": "BM\u0000\u0001\n\u0000\u007f\n\u0007fin"
+    },
+    "stdout": "Copiados 12 bytes de foto.bin a copia.bin.\n",
+    "expect_files": {
+      "copia.bin": "BM\u0000\u0001\n\u0000\u007f\n\u0007fin"
+    }
+  },
+  {
+    "name": "finales de línea de Windows",
+    "args": [
+      "win.txt",
+      "copia.txt"
+    ],
+    "files": {
+      "win.txt": "uno\r\ndos\r\n"
+    },
+    "stdout": "Copiados 10 bytes de win.txt a copia.txt.\n",
+    "expect_files": {
+      "copia.txt": "uno\r\ndos\r\n"
+    }
+  },
+  {
+    "name": "sobrescribe un destino más largo",
+    "args": [
+      "a.txt",
+      "b.txt"
+    ],
+    "files": {
+      "a.txt": "corto",
+      "b.txt": "un contenido bastante más largo"
+    },
+    "stdout": "Copiados 5 bytes de a.txt a b.txt.\n",
+    "expect_files": {
+      "b.txt": "corto"
+    }
+  },
+  {
+    "name": "origen vacío",
+    "args": [
+      "vacio.bin",
+      "copia.bin"
+    ],
+    "files": {
+      "vacio.bin": ""
+    },
+    "stdout": "Copiados 0 bytes de vacio.bin a copia.bin.\n",
+    "expect_files": {
+      "copia.bin": ""
+    }
+  },
+  {
+    "name": "origen ausente",
+    "args": [
+      "no-existe.bin",
+      "copia.bin"
+    ],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: no se puede abrir 'no-existe.bin'.\n"
+  },
+  {
+    "name": "carpeta de destino inexistente",
+    "args": [
+      "a.txt",
+      "no/existe/b.txt"
+    ],
+    "files": {
+      "a.txt": "hola"
+    },
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: no se puede crear 'no/existe/b.txt'.\n"
+  },
+  {
+    "name": "misma ruta",
+    "args": [
+      "a.txt",
+      "a.txt"
+    ],
+    "files": {
+      "a.txt": "hola"
+    },
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el origen y el destino son la misma ruta.\n",
+    "expect_files": {
+      "a.txt": "hola"
+    }
+  },
+  {
+    "name": "sin argumentos",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 090 ORIGEN DESTINO\n"
+  }
+]

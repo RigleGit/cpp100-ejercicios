@@ -1,0 +1,25 @@
+[
+  {
+    "name": "varios límites en orden",
+    "args": ["1000000", "100", "10", "1000"],
+    "stdout": "Primos hasta 1000000: 78498\nPrimos hasta 100: 25\nPrimos hasta 10: 4\nPrimos hasta 1000: 168\n"
+  },
+  {
+    "name": "límites pequeños",
+    "args": ["0", "1", "2"],
+    "stdout": "Primos hasta 0: 0\nPrimos hasta 1: 0\nPrimos hasta 2: 1\n"
+  },
+  {
+    "name": "un argumento erróneo no detiene a los demás",
+    "args": ["30", "mil", "-4", "2000000", "50"],
+    "status": 1,
+    "stdout": "Primos hasta 30: 10\nPrimos hasta 50: 15\n",
+    "stderr": "Error en 'mil': no es un entero entre 0 y 1000000.\nError en '-4': no es un entero entre 0 y 1000000.\nError en '2000000': no es un entero entre 0 y 1000000.\n"
+  },
+  {
+    "name": "sin argumentos",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 097 LIMITE... (de 1 a 16 límites)\n"
+  }
+]

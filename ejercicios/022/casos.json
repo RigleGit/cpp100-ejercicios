@@ -1,0 +1,31 @@
+[
+  {
+    "name": "normal",
+    "stdin": "3 8\n",
+    "stdout": "Antes: a = 3, b = 8\nTras intercambiarCopia: a = 3, b = 8\nTras intercambiar: a = 8, b = 3\n"
+  },
+  {
+    "name": "iguales",
+    "stdin": "5 5\n",
+    "stdout": "Antes: a = 5, b = 5\nTras intercambiarCopia: a = 5, b = 5\nTras intercambiar: a = 5, b = 5\n"
+  },
+  {
+    "name": "negativos",
+    "stdin": "-4 10\n",
+    "stdout": "Antes: a = -4, b = 10\nTras intercambiarCopia: a = -4, b = 10\nTras intercambiar: a = 10, b = -4\n"
+  },
+  {
+    "name": "falta_un_entero",
+    "stdin": "7\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: se esperaban dos enteros.\n"
+  },
+  {
+    "name": "no_numerico",
+    "stdin": "3 x\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: se esperaban dos enteros.\n"
+  }
+]

@@ -1,0 +1,60 @@
+[
+  {
+    "name": "normal",
+    "stdin": "12 -2 15 1\n",
+    "stdout": "Medidas: 4\nMínima: -2\nMáxima: 15\nMedia: 6.5\n"
+  },
+  {
+    "name": "una medida",
+    "stdin": "21\n",
+    "stdout": "Medidas: 1\nMínima: 21\nMáxima: 21\nMedia: 21.0\n"
+  },
+  {
+    "name": "todas negativas",
+    "stdin": "-5 -1 -9\n",
+    "stdout": "Medidas: 3\nMínima: -9\nMáxima: -1\nMedia: -5.0\n"
+  },
+  {
+    "name": "límites",
+    "stdin": "-100 100\n",
+    "stdout": "Medidas: 2\nMínima: -100\nMáxima: 100\nMedia: 0.0\n"
+  },
+  {
+    "name": "sin medidas",
+    "stdin": "",
+    "stdout": "Sin medidas.\n"
+  },
+  {
+    "name": "sin salto final",
+    "stdin": "10 20",
+    "stdout": "Medidas: 2\nMínima: 10\nMáxima: 20\nMedia: 15.0\n"
+  },
+  {
+    "name": "fuera de rango",
+    "stdin": "20 101\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: temperatura fuera de rango: 101\n"
+  },
+  {
+    "name": "no numérica",
+    "stdin": "20 calor\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe solo temperaturas enteras.\n"
+  },
+  {
+    "name": "número que no cabe en int",
+    "stdin": "20 99999999999",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe solo temperaturas enteras.\n"
+  },
+  {
+    "name": "signo suelto al final",
+    "stdin": "20 -",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe solo temperaturas enteras.\n"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "normal",
+    "stdin": "ADD Ana 600111222\nADD Luis 0034911\nGET Ana\nADD Ana 600999888\nGET Ana\nDEL Luis\nGET Luis\nLIST\n",
+    "stdout": "Guardado: Ana\nGuardado: Luis\nAna: 600111222\nActualizado: Ana\nAna: 600999888\nBorrado: Luis\nNo encontrado: Luis\nContactos: 1\n  Ana: 600999888\n"
+  },
+  {
+    "name": "GET no inserta",
+    "stdin": "GET Marta\nLIST\nADD Marta 123\nLIST\n",
+    "stdout": "No encontrado: Marta\nContactos: 0\nGuardado: Marta\nContactos: 1\n  Marta: 123\n"
+  },
+  {
+    "name": "borrar ausente",
+    "stdin": "DEL Ana\n",
+    "stdout": "No encontrado: Ana\n"
+  },
+  {
+    "name": "agenda vacía",
+    "stdin": "LIST\n",
+    "stdout": "Contactos: 0\n"
+  },
+  {
+    "name": "sin órdenes",
+    "stdin": "",
+    "stdout": ""
+  },
+  {
+    "name": "orden desconocida",
+    "stdin": "ADD Ana 1\nPUT Ana 2\nLIST\n",
+    "status": 1,
+    "stdout": "Guardado: Ana\n",
+    "stderr": "Error en la línea 2: usa ADD nombre teléfono, GET nombre, DEL nombre o LIST.\n"
+  },
+  {
+    "name": "faltan campos",
+    "stdin": "ADD Ana\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error en la línea 1: usa ADD nombre teléfono, GET nombre, DEL nombre o LIST.\n"
+  },
+  {
+    "name": "sobran campos",
+    "stdin": "GET Ana Luis\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error en la línea 1: usa ADD nombre teléfono, GET nombre, DEL nombre o LIST.\n"
+  },
+  {
+    "name": "línea vacía",
+    "stdin": "LIST\n\n",
+    "status": 1,
+    "stdout": "Contactos: 0\n",
+    "stderr": "Error en la línea 2: usa ADD nombre teléfono, GET nombre, DEL nombre o LIST.\n"
+  },
+  {
+    "name": "minúsculas",
+    "stdin": "add Ana 1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error en la línea 1: usa ADD nombre teléfono, GET nombre, DEL nombre o LIST.\n"
+  }
+]

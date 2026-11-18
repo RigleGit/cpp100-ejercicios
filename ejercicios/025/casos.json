@@ -1,0 +1,46 @@
+[
+  {
+    "name": "normal",
+    "stdin": "L 2\nV 3\nL 1\nV 2\nL 3\n",
+    "stdout": "Local 6 - 5 Visitante\n"
+  },
+  {
+    "name": "sin_jugadas",
+    "stdout": "Local 0 - 0 Visitante\n"
+  },
+  {
+    "name": "equipo_desconocido",
+    "stdin": "L 2\nX 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: equipo desconocido: X\n"
+  },
+  {
+    "name": "puntos_fuera",
+    "stdin": "V 4\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: una canasta vale 1, 2 o 3 puntos.\n"
+  },
+  {
+    "name": "puntos_cero",
+    "stdin": "L 0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: una canasta vale 1, 2 o 3 puntos.\n"
+  },
+  {
+    "name": "falta_puntuacion",
+    "stdin": "L 2\nV\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: falta la puntuación entera.\n"
+  },
+  {
+    "name": "puntuacion_no_numerica",
+    "stdin": "L dos\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: falta la puntuación entera.\n"
+  }
+]

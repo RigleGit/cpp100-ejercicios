@@ -1,0 +1,74 @@
+[
+  {
+    "name": "cuadrado",
+    "stdin": "cuadrado 3\n",
+    "stdout": "Área: 9.00\n",
+    "stderr": ""
+  },
+  {
+    "name": "rectangulo",
+    "stdin": "rectangulo 3 4.5\n",
+    "stdout": "Área: 13.50\n",
+    "stderr": ""
+  },
+  {
+    "name": "circulo",
+    "stdin": "circulo 1\n",
+    "stdout": "Área: 3.14\n",
+    "stderr": ""
+  },
+  {
+    "name": "medida_cero",
+    "stdin": "circulo 0\n",
+    "stdout": "Área: 0.00\n",
+    "stderr": ""
+  },
+  {
+    "name": "falta_altura",
+    "stdin": "rectangulo 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el rectángulo necesita base y altura.\n"
+  },
+  {
+    "name": "medida_negativa",
+    "stdin": "cuadrado -2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: las medidas no pueden ser negativas.\n"
+  },
+  {
+    "name": "altura_negativa",
+    "stdin": "rectangulo 3 -1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: las medidas no pueden ser negativas.\n"
+  },
+  {
+    "name": "figura_desconocida",
+    "stdin": "triangulo 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: figura desconocida 'triangulo'.\n"
+  },
+  {
+    "name": "vacia",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan la figura o sus medidas.\n"
+  },
+  {
+    "name": "prioridad_medida_negativa",
+    "stdin": "triangulo -3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: las medidas no pueden ser negativas.\n"
+  },
+  {
+    "name": "medida_no_numerica",
+    "stdin": "cuadrado abc\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan la figura o sus medidas.\n"
+  }
+]

@@ -1,0 +1,24 @@
+name: Contratos de los ejercicios C++
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verificar:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            cxx: g++-14
+          - os: macos-latest
+            cxx: clang++
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    env:
+      CXX: ${{ matrix.cxx }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Compilador
+        run: ${{ matrix.cxx }} --version
+      - name: Compilar, formato, casos y pruebas
+        run: python3 tools/verify.py

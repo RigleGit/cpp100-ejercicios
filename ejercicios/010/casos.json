@@ -1,0 +1,77 @@
+[
+  {
+    "name": "suma",
+    "stdin": "10 + 3\n",
+    "stdout": "10 + 3 = 13\n",
+    "stderr": ""
+  },
+  {
+    "name": "resta_negativa",
+    "stdin": "3 - 10\n",
+    "stdout": "3 - 10 = -7\n",
+    "stderr": ""
+  },
+  {
+    "name": "producto",
+    "stdin": "6 * 7\n",
+    "stdout": "6 * 7 = 42\n",
+    "stderr": ""
+  },
+  {
+    "name": "division_entera",
+    "stdin": "7 / 2\n",
+    "stdout": "7 / 2 = 3\n",
+    "stderr": ""
+  },
+  {
+    "name": "resto",
+    "stdin": "7 % 2\n",
+    "stdout": "7 % 2 = 1\n",
+    "stderr": ""
+  },
+  {
+    "name": "division_negativa",
+    "stdin": "-7 / 2\n",
+    "stdout": "-7 / 2 = -3\n",
+    "stderr": ""
+  },
+  {
+    "name": "resto_negativo",
+    "stdin": "-7 % 2\n",
+    "stdout": "-7 % 2 = -1\n",
+    "stderr": ""
+  },
+  {
+    "name": "division_por_cero",
+    "stdin": "5 / 0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: división por cero.\n"
+  },
+  {
+    "name": "resto_por_cero",
+    "stdin": "5 % 0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: división por cero.\n"
+  },
+  {
+    "name": "operador_desconocido",
+    "stdin": "2 ^ 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: operador desconocido '^'.\n"
+  },
+  {
+    "name": "producto_en_limite",
+    "stdin": "-10000 * 10000\n",
+    "stdout": "-10000 * 10000 = -100000000\n",
+    "stderr": ""
+  },
+  {
+    "name": "sin_espacios",
+    "stdin": "7/2\n",
+    "stdout": "7 / 2 = 3\n",
+    "stderr": ""
+  }
+]

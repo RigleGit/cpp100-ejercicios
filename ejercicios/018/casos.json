@@ -1,0 +1,47 @@
+[
+  {
+    "name": "cero",
+    "stdin": "0\n",
+    "stdout": "0! = 1\n",
+    "stderr": ""
+  },
+  {
+    "name": "uno",
+    "stdin": "1\n",
+    "stdout": "1! = 1\n",
+    "stderr": ""
+  },
+  {
+    "name": "cinco",
+    "stdin": "5\n",
+    "stdout": "5! = 120\n",
+    "stderr": ""
+  },
+  {
+    "name": "limite",
+    "stdin": "20\n",
+    "stdout": "20! = 2432902008176640000\n",
+    "stderr": ""
+  },
+  {
+    "name": "desborda",
+    "stdin": "21\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: n debe estar entre 0 y 20.\n"
+  },
+  {
+    "name": "negativo",
+    "stdin": "-1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: n debe estar entre 0 y 20.\n"
+  },
+  {
+    "name": "no_numerico",
+    "stdin": "abc\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: se esperaba un entero.\n"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "name": "empleado y gerente",
+    "stdout": "Construye Empleado Ana\nConstruye Empleado Luis\nConstruye Gerente Luis\nAna: 1800 euros\nLuis: 2900 euros (4 personas a cargo)\nAna como Empleado: 1800 euros\nLuis como Empleado: 2500 euros\n",
+    "stderr": ""
+  }
+]

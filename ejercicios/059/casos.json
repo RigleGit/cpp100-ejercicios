@@ -1,0 +1,17 @@
+[
+  {
+    "name": "normal",
+    "stdin": "Ana Luis Marta\n",
+    "stdout": "Pedido 1: Ana\nPedido 2: Luis\nPedido 3: Marta\nPedidos creados: 3\n"
+  },
+  {
+    "name": "clientes repetidos",
+    "stdin": "Ana\nAna\n",
+    "stdout": "Pedido 1: Ana\nPedido 2: Ana\nPedidos creados: 2\n"
+  },
+  {
+    "name": "sin pedidos",
+    "stdin": "",
+    "stdout": "Pedidos creados: 0\n"
+  }
+]

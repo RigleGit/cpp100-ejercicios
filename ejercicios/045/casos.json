@@ -1,0 +1,36 @@
+[
+  {
+    "name": "normal",
+    "stdin": "5\n6\n7 2 9 5 6 1\n",
+    "stdout": "Mayores que 5: 7 9 6\nSuma: 22\nComprobaciones: 6\n"
+  },
+  {
+    "name": "ninguno",
+    "stdin": "10\n3\n1 10 7\n",
+    "stdout": "Mayores que 10: ninguno\nSuma: 0\nComprobaciones: 3\n"
+  },
+  {
+    "name": "negativos",
+    "stdin": "-3\n4\n-5 -2 0 -3\n",
+    "stdout": "Mayores que -3: -2 0\nSuma: -2\nComprobaciones: 4\n"
+  },
+  {
+    "name": "sin números",
+    "stdin": "0\n0\n",
+    "stdout": "Mayores que 0: ninguno\nSuma: 0\nComprobaciones: 0\n"
+  },
+  {
+    "name": "número fuera de rango",
+    "stdin": "0\n2\n5 2000000\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan números o hay uno no válido (de -1000000 a 1000000).\n"
+  },
+  {
+    "name": "faltan números",
+    "stdin": "0\n3\n4 5\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan números o hay uno no válido (de -1000000 a 1000000).\n"
+  }
+]

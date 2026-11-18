@@ -1,0 +1,41 @@
+[
+  {
+    "name": "normal",
+    "stdin": "4 1 0 -8 9\n",
+    "stdout": "Mínimo: -8\nMáximo: 9\n"
+  },
+  {
+    "name": "todos_negativos",
+    "stdin": "3 -9 -2 -7\n",
+    "stdout": "Mínimo: -9\nMáximo: -2\n"
+  },
+  {
+    "name": "repetidos",
+    "stdin": "3 7 7 7\n",
+    "stdout": "Mínimo: 7\nMáximo: 7\n"
+  },
+  {
+    "name": "uno",
+    "stdin": "1 -5\n",
+    "stdout": "Mínimo: -5\nMáximo: -5\n"
+  },
+  {
+    "name": "extremo_al_final",
+    "stdin": "3 2 3 10\n",
+    "stdout": "Mínimo: 2\nMáximo: 10\n"
+  },
+  {
+    "name": "vacio",
+    "stdin": "0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: no hay valores.\n"
+  },
+  {
+    "name": "invalida",
+    "stdin": "2 4\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada no válida.\n"
+  }
+]

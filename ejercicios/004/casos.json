@@ -1,0 +1,44 @@
+[
+  {
+    "name": "normal",
+    "stdin": "3725\n",
+    "stdout": "3725 s = 1 h 2 min 5 s\n",
+    "stderr": ""
+  },
+  {
+    "name": "cero",
+    "stdin": "0\n",
+    "stdout": "0 s = 0 h 0 min 0 s\n",
+    "stderr": ""
+  },
+  {
+    "name": "menos_de_un_minuto",
+    "stdin": "59\n",
+    "stdout": "59 s = 0 h 0 min 59 s\n",
+    "stderr": ""
+  },
+  {
+    "name": "hora_exacta",
+    "stdin": "3600\n",
+    "stdout": "3600 s = 1 h 0 min 0 s\n",
+    "stderr": ""
+  },
+  {
+    "name": "ultimo_segundo_del_dia",
+    "stdin": "86399\n",
+    "stdout": "86399 s = 23 h 59 min 59 s\n",
+    "stderr": ""
+  },
+  {
+    "name": "mas_de_un_dia",
+    "stdin": "90061\n",
+    "stdout": "90061 s = 25 h 1 min 1 s\n",
+    "stderr": ""
+  },
+  {
+    "name": "limite_superior",
+    "stdin": "1000000000\n",
+    "stdout": "1000000000 s = 277777 h 46 min 40 s\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "name": "trazas",
+    "stdout": "-- copia y movimiento\nConstruye tabla\nCopia tabla\nMueve tabla\na queda (vacío)\n-- devolver un temporal\nConstruye informe\n-- asignaciones\nAsigna moviendo tabla sobre informe\nAsigna copiando tabla sobre (vacío)\n-- pasar por valor\nMueve tabla\nUsa tabla\nDestruye tabla\nc queda (vacío)\n-- mover un objeto const\nConstruye constante\nCopia constante\n-- fin de main\nDestruye constante\nDestruye constante\nDestruye tabla\nDestruye (vacío)\nDestruye (vacío)\nDestruye tabla\n",
+    "stderr": ""
+  }
+]

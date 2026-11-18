@@ -1,0 +1,21 @@
+[
+  {
+    "name": "pedidos servidos",
+    "stdin": "tornillo 3\ntuerca 5\n",
+    "stdout": "Pedido 1: servido, quedan 7\nPedido 2: servido, quedan 0\nServidos: 2 de 2\n",
+    "stderr": ""
+  },
+  {
+    "name": "errores de cada tipo",
+    "stdin": "tornillo 3\ntornillo 8\ntuerca 0\nclavo 2\narandela 1\ntuerca dos\ntuerca 1 2\n",
+    "status": 1,
+    "stdout": "Pedido 1: servido, quedan 7\nServidos: 1 de 7\n",
+    "stderr": "Pedido 2: no hay bastante tornillo (quedan 7)\nPedido 3: escribe un código y una cantidad positiva\nPedido 4: no existe el producto clavo\nPedido 5: no hay bastante arandela (quedan 0)\nPedido 6: escribe un código y una cantidad positiva\nPedido 7: escribe un código y una cantidad positiva\n"
+  },
+  {
+    "name": "sin pedidos",
+    "stdin": "",
+    "stdout": "Servidos: 0 de 0\n",
+    "stderr": ""
+  }
+]

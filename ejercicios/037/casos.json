@@ -1,0 +1,40 @@
+[
+  {
+    "name": "normal",
+    "stdin": "3 1 4 1\n",
+    "stdout": "Leídos: 4\nValores: 3 1 4 1\nAcumulados: 3 4 8 9\n"
+  },
+  {
+    "name": "negativos",
+    "stdin": "5 -2 -3\n",
+    "stdout": "Leídos: 3\nValores: 5 -2 -3\nAcumulados: 5 3 0\n"
+  },
+  {
+    "name": "vacia",
+    "stdout": "Leídos: 0\nValores:\nAcumulados:\n"
+  },
+  {
+    "name": "grandes",
+    "stdin": "2147483647 2147483647\n",
+    "stdout": "Leídos: 2\nValores: 2147483647 2147483647\nAcumulados: 2147483647 4294967294\n"
+  },
+  {
+    "name": "invalida",
+    "stdin": "1 2 tres\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada no válida.\n"
+  },
+  {
+    "name": "signo_al_final",
+    "stdin": "1 2 -",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada no válida.\n"
+  },
+  {
+    "name": "ultimo_sin_salto",
+    "stdin": "7 8",
+    "stdout": "Leídos: 2\nValores: 7 8\nAcumulados: 7 15\n"
+  }
+]

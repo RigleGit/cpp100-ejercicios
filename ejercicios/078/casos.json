@@ -1,0 +1,21 @@
+[
+  {
+    "name": "figuras válidas",
+    "stdin": "circulo 1\nrectangulo 2 3.5\ncirculo 2\n",
+    "stdout": "círculo de radio 1: área 3.14\nrectángulo de 2x3.5: área 7.00\ncírculo de radio 2: área 12.57\nÁrea total: 22.71\n~Circulo 2\n  ~Figura\n~Rectangulo 2x3.5\n  ~Figura\n~Circulo 1\n  ~Figura\nFin\n",
+    "stderr": ""
+  },
+  {
+    "name": "líneas no válidas",
+    "stdin": "circulo 1\nhexagono 2\ncirculo -1\nrectangulo 2\ncirculo 1 2\nrectangulo 4 5\n",
+    "status": 1,
+    "stdout": "círculo de radio 1: área 3.14\nrectángulo de 4x5: área 20.00\nÁrea total: 23.14\n~Rectangulo 4x5\n  ~Figura\n~Circulo 1\n  ~Figura\nFin\n",
+    "stderr": "Línea no válida: hexagono 2\nLínea no válida: circulo -1\nLínea no válida: rectangulo 2\nLínea no válida: circulo 1 2\n"
+  },
+  {
+    "name": "entrada vacía",
+    "stdin": "",
+    "stdout": "Área total: 0.00\nFin\n",
+    "stderr": ""
+  }
+]

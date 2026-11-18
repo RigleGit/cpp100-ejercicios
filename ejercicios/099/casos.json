@@ -1,0 +1,145 @@
+[
+  {
+    "name": "listar todo",
+    "args": ["tareas.txt", "listar"],
+    "files": {"tareas.txt": "1;pendiente;regar\n2;hecha;Barrer\n4;pendiente;Comprar pan\n7;hecha;barrer\n"},
+    "stdout": "[ ] 1 regar\n[x] 2 Barrer\n[ ] 4 Comprar pan\n[x] 7 barrer\nPendientes: 2 de 4\n"
+  },
+  {
+    "name": "solo pendientes",
+    "args": ["tareas.txt", "listar", "--pendientes"],
+    "files": {"tareas.txt": "1;pendiente;regar\n2;hecha;Barrer\n4;pendiente;Comprar pan\n7;hecha;barrer\n"},
+    "stdout": "[ ] 1 regar\n[ ] 4 Comprar pan\nPendientes: 2 de 4\n"
+  },
+  {
+    "name": "hechas por texto",
+    "args": ["tareas.txt", "listar", "--por-texto", "--hechas"],
+    "files": {"tareas.txt": "1;pendiente;regar\n7;hecha;barrer\n9;hecha;Abrir\n12;hecha;Barrer\n"},
+    "stdout": "[x] 9 Abrir\n[x] 7 barrer\n[x] 12 Barrer\nPendientes: 1 de 4\n"
+  },
+  {
+    "name": "todas por texto",
+    "args": ["tareas.txt", "listar", "--por-texto"],
+    "files": {"tareas.txt": "1;pendiente;regar\n2;hecha;Barrer\n4;pendiente;Comprar pan\n"},
+    "stdout": "[x] 2 Barrer\n[ ] 4 Comprar pan\n[ ] 1 regar\nPendientes: 2 de 3\n"
+  },
+  {
+    "name": "filtro sin resultados",
+    "args": ["tareas.txt", "listar", "--hechas"],
+    "files": {"tareas.txt": "1;pendiente;regar\n"},
+    "stdout": "No hay tareas que mostrar.\nPendientes: 1 de 1\n"
+  },
+  {
+    "name": "lista vacía sin archivo",
+    "args": ["tareas.txt", "listar", "--pendientes"],
+    "stdout": "No hay tareas que mostrar.\nPendientes: 0 de 0\n"
+  },
+  {
+    "name": "añadir y completar siguen funcionando",
+    "args": ["tareas.txt", "añadir", "Tender la ropa"],
+    "files": {"tareas.txt": "1;pendiente;regar\n7;hecha;barrer\n"},
+    "stdout": "Añadida la tarea 8: Tender la ropa\n",
+    "expect_files": {"tareas.txt": "1;pendiente;regar\n7;hecha;barrer\n8;pendiente;Tender la ropa\n"}
+  },
+  {
+    "name": "completar",
+    "args": ["tareas.txt", "completar", "1"],
+    "files": {"tareas.txt": "1;pendiente;regar\n"},
+    "stdout": "Completada la tarea 1.\n",
+    "expect_files": {"tareas.txt": "1;hecha;regar\n"}
+  },
+  {
+    "name": "ayuda",
+    "args": ["ayuda"],
+    "stdout": "Órdenes:\n  099 ARCHIVO listar [--pendientes | --hechas] [--por-texto]\n  099 ARCHIVO añadir TEXTO\n  099 ARCHIVO completar ID\n  099 ayuda\n"
+  },
+  {
+    "name": "dos filtros",
+    "args": ["tareas.txt", "listar", "--hechas", "--pendientes"],
+    "status": 2,
+    "stdout": "",
+    "stderr": "Error de uso: listar admite un solo filtro.\nEscribe '099 ayuda' para ver las órdenes.\n"
+  },
+  {
+    "name": "opción repetida",
+    "args": ["tareas.txt", "listar", "--por-texto", "--por-texto"],
+    "status": 2,
+    "stdout": "",
+    "stderr": "Error de uso: la opción --por-texto está repetida.\nEscribe '099 ayuda' para ver las órdenes.\n"
+  },
+  {
+    "name": "opción desconocida",
+    "args": ["tareas.txt", "listar", "--urgentes"],
+    "status": 2,
+    "stdout": "",
+    "stderr": "Error de uso: opción desconocida '--urgentes'.\nEscribe '099 ayuda' para ver las órdenes.\n"
+  },
+  {
+    "name": "texto sin comillas",
+    "args": ["tareas.txt", "añadir", "Tender", "la", "ropa"],
+    "files": {"tareas.txt": "1;pendiente;regar\n"},
+    "status": 2,
+    "stdout": "",
+    "stderr": "Error de uso: añadir necesita un único TEXTO; usa comillas si tiene espacios.\nEscribe '099 ayuda' para ver las órdenes.\n",
+    "expect_files": {"tareas.txt": "1;pendiente;regar\n"}
+  },
+  {
+    "name": "completar sin ID",
+    "args": ["tareas.txt", "completar"],
+    "status": 2,
+    "stdout": "",
+    "stderr": "Error de uso: completar necesita un único ID.\nEscribe '099 ayuda' para ver las órdenes.\n"
+  },
+  {
+    "name": "ID con letras",
+    "args": ["tareas.txt", "completar", "2x"],
+    "status": 2,
+    "stdout": "",
+    "stderr": "Error de uso: '2x' no es un identificador válido.\nEscribe '099 ayuda' para ver las órdenes.\n"
+  },
+  {
+    "name": "ID cero",
+    "args": ["tareas.txt", "completar", "0"],
+    "status": 2,
+    "stdout": "",
+    "stderr": "Error de uso: '0' no es un identificador válido.\nEscribe '099 ayuda' para ver las órdenes.\n"
+  },
+  {
+    "name": "orden desconocida",
+    "args": ["tareas.txt", "borrar", "1"],
+    "status": 2,
+    "stdout": "",
+    "stderr": "Error de uso: orden desconocida 'borrar'.\nEscribe '099 ayuda' para ver las órdenes.\n"
+  },
+  {
+    "name": "sin argumentos",
+    "status": 2,
+    "stdout": "",
+    "stderr": "Error de uso: faltan argumentos.\nEscribe '099 ayuda' para ver las órdenes.\n"
+  },
+  {
+    "name": "uso correcto, tarea inexistente",
+    "args": ["tareas.txt", "completar", "5"],
+    "files": {"tareas.txt": "1;pendiente;regar\n"},
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: no existe la tarea 5.\n",
+    "expect_files": {"tareas.txt": "1;pendiente;regar\n"}
+  },
+  {
+    "name": "opción mal escrita con archivo dañado",
+    "args": ["tareas.txt", "listar", "--hecha"],
+    "files": {"tareas.txt": "uno;pendiente;regar\n"},
+    "status": 2,
+    "stdout": "",
+    "stderr": "Error de uso: opción desconocida '--hecha'.\nEscribe '099 ayuda' para ver las órdenes.\n"
+  },
+  {
+    "name": "archivo dañado",
+    "args": ["tareas.txt", "listar"],
+    "files": {"tareas.txt": "uno;pendiente;regar\n"},
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: tareas.txt, línea 1: identificador no válido.\n"
+  }
+]

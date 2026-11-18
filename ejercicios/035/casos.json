@@ -1,0 +1,60 @@
+[
+  {
+    "name": "normal",
+    "stdin": "4 1 2 3 4\n",
+    "stdout": "Cantidad: 4\nSuma: 10\nMedia: 2.50\n"
+  },
+  {
+    "name": "negativos",
+    "stdin": "2 -1 -2\n",
+    "stdout": "Cantidad: 2\nSuma: -3\nMedia: -1.50\n"
+  },
+  {
+    "name": "periodico",
+    "stdin": "3 1 1 2\n",
+    "stdout": "Cantidad: 3\nSuma: 4\nMedia: 1.33\n"
+  },
+  {
+    "name": "vacio",
+    "stdin": "0\n",
+    "stdout": "Cantidad: 0\nSuma: 0\nMedia: sin valores\n"
+  },
+  {
+    "name": "uno",
+    "stdin": "1 7\n",
+    "stdout": "Cantidad: 1\nSuma: 7\nMedia: 7.00\n"
+  },
+  {
+    "name": "grandes",
+    "stdin": "3 2147483647 2147483647 2147483647\n",
+    "stdout": "Cantidad: 3\nSuma: 6442450941\nMedia: 2147483647.00\n"
+  },
+  {
+    "name": "faltan",
+    "stdin": "3 1 2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada no válida.\n"
+  },
+  {
+    "name": "n_negativo",
+    "stdin": "-1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada no válida.\n"
+  },
+  {
+    "name": "n_demasiado",
+    "stdin": "1001\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada no válida.\n"
+  },
+  {
+    "name": "no_numerico",
+    "stdin": "2 1 x\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada no válida.\n"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "normal",
+    "stdin": "3 10 20 30 1\n",
+    "stdout": "Antes: 10 20 30\nEliminado: 20\nDespués: 10 30\n"
+  },
+  {
+    "name": "primero",
+    "stdin": "3 10 20 30 0\n",
+    "stdout": "Antes: 10 20 30\nEliminado: 10\nDespués: 20 30\n"
+  },
+  {
+    "name": "ultimo",
+    "stdin": "3 10 20 30 2\n",
+    "stdout": "Antes: 10 20 30\nEliminado: 30\nDespués: 10 20\n"
+  },
+  {
+    "name": "unico",
+    "stdin": "1 -5 0\n",
+    "stdout": "Antes: -5\nEliminado: -5\nDespués:\n"
+  },
+  {
+    "name": "igual_al_tamano",
+    "stdin": "3 10 20 30 3\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: índice fuera de rango.\n"
+  },
+  {
+    "name": "negativo",
+    "stdin": "3 10 20 30 -1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: índice fuera de rango.\n"
+  },
+  {
+    "name": "vacio",
+    "stdin": "0 0\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: índice fuera de rango.\n"
+  },
+  {
+    "name": "falta_indice",
+    "stdin": "3 10 20 30\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada no válida.\n"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "normal con empates",
+    "stdin": "5\nLuis 7\nAna 9\nMarta 7\nBeto 9\nCarla 5\n",
+    "stdout": "Por nombre:\n  Ana 9\n  Beto 9\n  Carla 5\n  Luis 7\n  Marta 7\nPor nota:\n  Ana 9\n  Beto 9\n  Luis 7\n  Marta 7\n  Carla 5\n"
+  },
+  {
+    "name": "mismo nombre",
+    "stdin": "3\nAna 4\nAna 8\nAna 6\n",
+    "stdout": "Por nombre:\n  Ana 4\n  Ana 6\n  Ana 8\nPor nota:\n  Ana 8\n  Ana 6\n  Ana 4\n"
+  },
+  {
+    "name": "sin alumnos",
+    "stdin": "0\n",
+    "stdout": "Por nombre:\nPor nota:\n"
+  },
+  {
+    "name": "nota fuera de rango",
+    "stdin": "2\nAna 9\nLuis 11\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: cada alumno lleva un nombre y una nota de 0 a 10.\n"
+  },
+  {
+    "name": "nota no numérica",
+    "stdin": "1\nAna nueve\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: cada alumno lleva un nombre y una nota de 0 a 10.\n"
+  },
+  {
+    "name": "faltan alumnos",
+    "stdin": "3\nAna 9\nLuis 7\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: cada alumno lleva un nombre y una nota de 0 a 10.\n"
+  },
+  {
+    "name": "cantidad negativa",
+    "stdin": "-1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe cuántos alumnos hay (de 0 a 1000).\n"
+  },
+  {
+    "name": "cantidad excesiva",
+    "stdin": "1001\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe cuántos alumnos hay (de 0 a 1000).\n"
+  }
+]

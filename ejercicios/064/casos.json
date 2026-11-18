@@ -1,0 +1,40 @@
+[
+  {
+    "name": "varios enteros",
+    "stdin": "5 -2 0 7\n",
+    "stdout": "Nodos: 4\nLista: 7 -> 0 -> -2 -> 5\nInvertida: 5 -> -2 -> 0 -> 7\n",
+    "stderr": ""
+  },
+  {
+    "name": "un solo nodo",
+    "stdin": "42\n",
+    "stdout": "Nodos: 1\nLista: 42\nInvertida: 42\n",
+    "stderr": ""
+  },
+  {
+    "name": "entrada vacía",
+    "stdin": "",
+    "stdout": "Nodos: 0\nLista: (vacía)\nInvertida: (vacía)\n",
+    "stderr": ""
+  },
+  {
+    "name": "texto no numérico",
+    "stdin": "1 2 tres\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la entrada solo puede tener enteros.\n"
+  },
+  {
+    "name": "último entero sin salto final",
+    "stdin": "5 7",
+    "stdout": "Nodos: 2\nLista: 7 -> 5\nInvertida: 5 -> 7\n",
+    "stderr": ""
+  },
+  {
+    "name": "número enorme al final sin salto",
+    "stdin": "1 99999999999",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la entrada solo puede tener enteros.\n"
+  }
+]

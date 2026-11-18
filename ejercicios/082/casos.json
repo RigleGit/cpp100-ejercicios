@@ -1,0 +1,22 @@
+[
+  {
+    "name": "equilibradas y con fallos",
+    "stdin": "v[i] = f(a, {b, c});\n(a + b]\nx)\n((a)\n",
+    "stdout": "1: ok\n2: '(' de la columna 1 se cierra con ']' en la columna 7\n3: ')' en la columna 2 no tiene pareja\n4: falta cerrar '(' de la columna 1 (1 sin cerrar)\n"
+  },
+  {
+    "name": "línea vacía y sin símbolos",
+    "stdin": "\nhola\n",
+    "stdout": "1: ok\n2: ok\n"
+  },
+  {
+    "name": "varias aperturas pendientes",
+    "stdin": "{[(\n",
+    "stdout": "1: falta cerrar '(' de la columna 3 (3 sin cerrar)\n"
+  },
+  {
+    "name": "sin entrada",
+    "stdin": "",
+    "stdout": ""
+  }
+]

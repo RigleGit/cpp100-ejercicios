@@ -1,0 +1,27 @@
+[
+  {
+    "name": "normal",
+    "stdin": "Ana Luis Ana Marta Luis Ana Beto\n",
+    "stdout": "Votos: 7\nCandidatos: 4\nAna: 3\nLuis: 2\nBeto: 1\nMarta: 1\n"
+  },
+  {
+    "name": "empate alfabético",
+    "stdin": "Zoe Ana Zoe Ana Luis\n",
+    "stdout": "Votos: 5\nCandidatos: 3\nAna: 2\nZoe: 2\nLuis: 1\n"
+  },
+  {
+    "name": "un solo voto",
+    "stdin": "Ana\n",
+    "stdout": "Votos: 1\nCandidatos: 1\nAna: 1\n"
+  },
+  {
+    "name": "mayúsculas distintas",
+    "stdin": "ana Ana ana\n",
+    "stdout": "Votos: 3\nCandidatos: 2\nana: 2\nAna: 1\n"
+  },
+  {
+    "name": "sin votos",
+    "stdin": "",
+    "stdout": "Votos: 0\nCandidatos: 0\n"
+  }
+]

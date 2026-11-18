@@ -1,0 +1,122 @@
+[
+  {
+    "name": "acierta_en_tres",
+    "args": [
+      "42"
+    ],
+    "stdin": "50 25 42\n",
+    "stdout": "Más bajo.\nMás alto.\n¡Acertaste! Intentos: 3\n",
+    "stderr": ""
+  },
+  {
+    "name": "acierta_a_la_primera",
+    "args": [
+      "42"
+    ],
+    "stdin": "42\n",
+    "stdout": "¡Acertaste! Intentos: 1\n",
+    "stderr": ""
+  },
+  {
+    "name": "acierta_en_el_quinto",
+    "args": [
+      "7"
+    ],
+    "stdin": "1 2 3 4 7\n",
+    "stdout": "Más alto.\nMás alto.\nMás alto.\nMás alto.\n¡Acertaste! Intentos: 5\n",
+    "stderr": ""
+  },
+  {
+    "name": "agota_intentos",
+    "args": [
+      "42"
+    ],
+    "stdin": "1 2 3 4 5 42\n",
+    "stdout": "Más alto.\nMás alto.\nMás alto.\nMás alto.\nMás alto.\nSin intentos. El número era 42.\n",
+    "stderr": ""
+  },
+  {
+    "name": "secreto_en_limite",
+    "args": [
+      "100"
+    ],
+    "stdin": "100\n",
+    "stdout": "¡Acertaste! Intentos: 1\n",
+    "stderr": ""
+  },
+  {
+    "name": "sin_argumento",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: programa SECRETO (entero entre 1 y 100)\n"
+  },
+  {
+    "name": "dos_argumentos",
+    "args": [
+      "4",
+      "5"
+    ],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: programa SECRETO (entero entre 1 y 100)\n"
+  },
+  {
+    "name": "secreto_cero",
+    "args": [
+      "0"
+    ],
+    "stdin": "1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el secreto debe estar entre 1 y 100.\n"
+  },
+  {
+    "name": "secreto_grande",
+    "args": [
+      "101"
+    ],
+    "stdin": "1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el secreto debe estar entre 1 y 100.\n"
+  },
+  {
+    "name": "secreto_no_numerico",
+    "args": [
+      "abc"
+    ],
+    "stdin": "1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el secreto debe estar entre 1 y 100.\n"
+  },
+  {
+    "name": "entrada_agotada",
+    "args": [
+      "42"
+    ],
+    "stdin": "50\n",
+    "status": 1,
+    "stdout": "Más bajo.\n",
+    "stderr": "Error: se esperaba otro intento.\n"
+  },
+  {
+    "name": "intento_no_numerico",
+    "args": [
+      "42"
+    ],
+    "stdin": "10 x\n",
+    "status": 1,
+    "stdout": "Más alto.\n",
+    "stderr": "Error: se esperaba otro intento.\n"
+  },
+  {
+    "name": "secreto_con_texto_sobrante",
+    "args": [
+      "42abc"
+    ],
+    "stdin": "42\n",
+    "stdout": "¡Acertaste! Intentos: 1\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "normal",
+    "stdin": "3\n20 25.5 -3\n",
+    "stdout": "Celsius: 20.0 25.5 -3.0\nFahrenheit: 68.0 77.9 26.6\nMedia: 14.2 °C = 57.5 °F\n"
+  },
+  {
+    "name": "punto de congelación y ebullición",
+    "stdin": "2\n0 100\n",
+    "stdout": "Celsius: 0.0 100.0\nFahrenheit: 32.0 212.0\nMedia: 50.0 °C = 122.0 °F\n"
+  },
+  {
+    "name": "menos cuarenta",
+    "stdin": "1\n-40\n",
+    "stdout": "Celsius: -40.0\nFahrenheit: -40.0\nMedia: -40.0 °C = -40.0 °F\n"
+  },
+  {
+    "name": "límites",
+    "stdin": "2\n-273.15 1000\n",
+    "stdout": "Celsius: -273.1 1000.0\nFahrenheit: -459.7 1832.0\nMedia: 363.4 °C = 686.2 °F\n"
+  },
+  {
+    "name": "sin temperaturas",
+    "stdin": "0\n",
+    "stdout": "Sin temperaturas.\n"
+  },
+  {
+    "name": "temperatura no válida",
+    "stdin": "2\n20 calor\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan temperaturas o hay una no válida (de -273.15 a 1000).\n"
+  },
+  {
+    "name": "faltan temperaturas",
+    "stdin": "3\n20 21\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan temperaturas o hay una no válida (de -273.15 a 1000).\n"
+  },
+  {
+    "name": "bajo el cero absoluto",
+    "stdin": "2\n20 -274\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan temperaturas o hay una no válida (de -273.15 a 1000).\n"
+  },
+  {
+    "name": "demasiado alta",
+    "stdin": "1\n1000.5\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: faltan temperaturas o hay una no válida (de -273.15 a 1000).\n"
+  },
+  {
+    "name": "cantidad no válida",
+    "stdin": "tres\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe cuántas temperaturas hay (de 0 a 1000).\n"
+  }
+]

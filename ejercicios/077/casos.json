@@ -1,0 +1,33 @@
+[
+  {
+    "name": "texto",
+    "args": [
+      "texto"
+    ],
+    "stdout": "Producto         Unidades\n---------------- --------\nArandela              250\nTornillo \"M3\"        1200\nTuerca, 5 mm           75\n",
+    "stderr": ""
+  },
+  {
+    "name": "csv",
+    "args": [
+      "csv"
+    ],
+    "stdout": "nombre,unidades\nArandela,250\n\"Tornillo \"\"M3\"\"\",1200\n\"Tuerca, 5 mm\",75\n",
+    "stderr": ""
+  },
+  {
+    "name": "formato desconocido",
+    "args": [
+      "json"
+    ],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 077 texto|csv.\n"
+  },
+  {
+    "name": "sin formato",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: uso: 077 texto|csv.\n"
+  }
+]

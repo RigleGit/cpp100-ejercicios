@@ -1,0 +1,50 @@
+[
+  {
+    "name": "normal",
+    "stdin": "3 4 2\n",
+    "stdout": "Rectángulo 3 x 4\nÁrea: 12\nPerímetro: 14\nCuadrado: no\nEscalado por 2:\nRectángulo 6 x 8\nÁrea: 48\nPerímetro: 28\nCuadrado: no\n"
+  },
+  {
+    "name": "cuadrado",
+    "stdin": "5 5 3\n",
+    "stdout": "Rectángulo 5 x 5\nÁrea: 25\nPerímetro: 20\nCuadrado: sí\nEscalado por 3:\nRectángulo 15 x 15\nÁrea: 225\nPerímetro: 60\nCuadrado: sí\n"
+  },
+  {
+    "name": "límites",
+    "stdin": "1000 1000 10\n",
+    "stdout": "Rectángulo 1000 x 1000\nÁrea: 1000000\nPerímetro: 4000\nCuadrado: sí\nEscalado por 10:\nRectángulo 10000 x 10000\nÁrea: 100000000\nPerímetro: 40000\nCuadrado: sí\n"
+  },
+  {
+    "name": "factor uno",
+    "stdin": "1 7 1\n",
+    "stdout": "Rectángulo 1 x 7\nÁrea: 7\nPerímetro: 16\nCuadrado: no\nEscalado por 1:\nRectángulo 1 x 7\nÁrea: 7\nPerímetro: 16\nCuadrado: no\n"
+  },
+  {
+    "name": "ancho cero",
+    "stdin": "0 4 2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe ancho y alto (de 1 a 1000) y un factor (de 1 a 10).\n"
+  },
+  {
+    "name": "factor fuera de rango",
+    "stdin": "3 4 11\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe ancho y alto (de 1 a 1000) y un factor (de 1 a 10).\n"
+  },
+  {
+    "name": "no numérico",
+    "stdin": "tres 4 2\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe ancho y alto (de 1 a 1000) y un factor (de 1 a 10).\n"
+  },
+  {
+    "name": "faltan datos",
+    "stdin": "3 4\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: escribe ancho y alto (de 1 a 1000) y un factor (de 1 a 10).\n"
+  }
+]

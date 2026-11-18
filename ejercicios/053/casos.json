@@ -1,0 +1,22 @@
+[
+  {
+    "name": "normal",
+    "stdin": "ana Carlos alberto beatriz carmen Ana\n",
+    "stdout": "A (3): ana alberto Ana\nB (1): beatriz\nC (2): Carlos carmen\n"
+  },
+  {
+    "name": "inicial no alfabética",
+    "stdin": "3d _x árbol zorro\n",
+    "stdout": "# (3): 3d _x árbol\nZ (1): zorro\n"
+  },
+  {
+    "name": "repetidas",
+    "stdin": "sol sol Sol\n",
+    "stdout": "S (3): sol sol Sol\n"
+  },
+  {
+    "name": "vacía",
+    "stdin": "",
+    "stdout": "Sin palabras.\n"
+  }
+]

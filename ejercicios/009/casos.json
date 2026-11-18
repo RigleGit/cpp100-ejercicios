@@ -1,0 +1,70 @@
+[
+  {
+    "name": "cero",
+    "stdin": "0\n",
+    "stdout": "Insuficiente\n",
+    "stderr": ""
+  },
+  {
+    "name": "casi_cinco",
+    "stdin": "4.99\n",
+    "stdout": "Insuficiente\n",
+    "stderr": ""
+  },
+  {
+    "name": "cinco",
+    "stdin": "5\n",
+    "stdout": "Suficiente\n",
+    "stderr": ""
+  },
+  {
+    "name": "seis",
+    "stdin": "6\n",
+    "stdout": "Bien\n",
+    "stderr": ""
+  },
+  {
+    "name": "seis_y_medio",
+    "stdin": "6.5\n",
+    "stdout": "Bien\n",
+    "stderr": ""
+  },
+  {
+    "name": "siete",
+    "stdin": "7\n",
+    "stdout": "Notable\n",
+    "stderr": ""
+  },
+  {
+    "name": "casi_nueve",
+    "stdin": "8.99\n",
+    "stdout": "Notable\n",
+    "stderr": ""
+  },
+  {
+    "name": "nueve",
+    "stdin": "9\n",
+    "stdout": "Sobresaliente\n",
+    "stderr": ""
+  },
+  {
+    "name": "diez",
+    "stdin": "10\n",
+    "stdout": "Sobresaliente\n",
+    "stderr": ""
+  },
+  {
+    "name": "negativa",
+    "stdin": "-1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la nota debe estar entre 0 y 10.\n"
+  },
+  {
+    "name": "mayor_que_diez",
+    "stdin": "10.5\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la nota debe estar entre 0 y 10.\n"
+  }
+]

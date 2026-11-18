@@ -1,0 +1,96 @@
+[
+  {
+    "name": "normal",
+    "args": [
+      "3"
+    ],
+    "stdin": "Hola, mundo\n",
+    "stdout": "Krod, pxqgr\n"
+  },
+  {
+    "name": "vuelta_al_alfabeto",
+    "args": [
+      "3"
+    ],
+    "stdin": "xyz XYZ\n",
+    "stdout": "abc ABC\n"
+  },
+  {
+    "name": "negativo",
+    "args": [
+      "-3"
+    ],
+    "stdin": "Krod\n",
+    "stdout": "Hola\n"
+  },
+  {
+    "name": "grande",
+    "args": [
+      "29"
+    ],
+    "stdin": "abc\n",
+    "stdout": "def\n"
+  },
+  {
+    "name": "cero",
+    "args": [
+      "0"
+    ],
+    "stdin": "Sin cambios\n",
+    "stdout": "Sin cambios\n"
+  },
+  {
+    "name": "utf8",
+    "args": [
+      "3"
+    ],
+    "stdin": "año\n",
+    "stdout": "dñr\n"
+  },
+  {
+    "name": "no_entero",
+    "args": [
+      "tres"
+    ],
+    "stdin": "abc\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el desplazamiento debe ser un entero.\n"
+  },
+  {
+    "name": "parcial",
+    "args": [
+      "3x"
+    ],
+    "stdin": "abc\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el desplazamiento debe ser un entero.\n"
+  },
+  {
+    "name": "sin_argumento",
+    "stdin": "abc\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: indica el desplazamiento como único argumento.\n"
+  },
+  {
+    "name": "minimo_int",
+    "args": [
+      "-2147483648"
+    ],
+    "stdin": "abc\n",
+    "stdout": "cde\n"
+  },
+  {
+    "name": "sobra_argumento",
+    "args": [
+      "3",
+      "4"
+    ],
+    "stdin": "abc\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: indica el desplazamiento como único argumento.\n"
+  }
+]

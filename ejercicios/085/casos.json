@@ -1,0 +1,6 @@
+[
+  {
+    "name": "demostración completa",
+    "stdout": "sumar() = 0\nsumar(1, 2, 3) = 6\nsumar(1.5, 2, 3) = 6.5\ntodos_positivos(4, 7, 1) = sí\ntodos_positivos(4, -7, 1) = no\ntodos_positivos() = sí\ncontar(1, \"dos\", 3.5, 'c') = 4\n1 | dos | 3.5 | c\nsolo\n"
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "name": "guardar",
+    "args": ["guardar", "inventario.txt"],
+    "stdin": "Tornillo M4;100;5\nMartillo;2;1250\n",
+    "stdout": "Productos guardados en inventario.txt: 2\n",
+    "expect_files": {"inventario.txt": "inventario 1\nTornillo M4;100;5\nMartillo;2;1250\n"}
+  },
+  {
+    "name": "mostrar",
+    "args": ["mostrar", "inventario.txt"],
+    "files": {"inventario.txt": "inventario 1\nTornillo M4;100;5\nMartillo;2;1250\n"},
+    "stdout": "Productos: 2\nTornillo M4: 100 uds. a 0.05 € = 5.00 €\nMartillo: 2 uds. a 12.50 € = 25.00 €\nTotal: 30.00 €\n"
+  },
+  {
+    "name": "guardar sin productos",
+    "args": ["guardar", "inventario.txt"],
+    "stdin": "",
+    "stdout": "Productos guardados en inventario.txt: 0\n",
+    "expect_files": {"inventario.txt": "inventario 1\n"}
+  },
+  {
+    "name": "mostrar inventario vacío",
+    "args": ["mostrar", "inventario.txt"],
+    "files": {"inventario.txt": "inventario 1\n"},
+    "stdout": "Productos: 0\nTotal: 0.00 €\n"
+  },
+  {
+    "name": "entrada inválida no toca el archivo",
+    "args": ["guardar", "inventario.txt"],
+    "stdin": "Lija;3;80\nCola;-1;300\n",
+    "files": {"inventario.txt": "inventario 1\nMartillo;2;1250\n"},
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada, línea 2: cantidad no válida.\n",
+    "expect_files": {"inventario.txt": "inventario 1\nMartillo;2;1250\n"}
+  },
+  {
+    "name": "campo de más",
+    "args": ["guardar", "inventario.txt"],
+    "stdin": "Lija;3;80;extra\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada, línea 1: se esperaba NOMBRE;CANTIDAD;CENTIMOS.\n"
+  },
+  {
+    "name": "precio con decimales",
+    "args": ["guardar", "inventario.txt"],
+    "stdin": "Lija;3;0.80\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada, línea 1: precio no válido.\n"
+  },
+  {
+    "name": "archivo sin cabecera",
+    "args": ["mostrar", "inventario.txt"],
+    "files": {"inventario.txt": "Martillo;2;1250\n"},
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: inventario.txt, línea 1: falta la cabecera 'inventario 1'.\n"
+  },
+  {
+    "name": "archivo corrupto",
+    "args": ["mostrar", "inventario.txt"],
+    "files": {"inventario.txt": "inventario 1\nMartillo;2;1250\n;4;10\n"},
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: inventario.txt, línea 3: falta el nombre.\n"
+  },
+  {
+    "name": "archivo ausente",
+    "args": ["mostrar", "inventario.txt"],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: inventario.txt, no se puede abrir el archivo.\n"
+  },
+  {
+    "name": "orden desconocida",
+    "args": ["borrar", "inventario.txt"],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 092 guardar|mostrar ARCHIVO\n"
+  },
+  {
+    "name": "mostrar un archivo con finales de Windows",
+    "args": ["mostrar", "inventario.txt"],
+    "files": {"inventario.txt": "inventario 1\r\nLija;3;80\r\n"},
+    "stdout": "Productos: 1\nLija: 3 uds. a 0.80 € = 2.40 €\nTotal: 2.40 €\n"
+  },
+  {
+    "name": "guardar una entrada con finales de Windows",
+    "args": ["guardar", "inventario.txt"],
+    "stdin": "Lija;3;80\r\nCola;1;300\r\n",
+    "stdout": "Productos guardados en inventario.txt: 2\n",
+    "expect_files": {"inventario.txt": "inventario 1\nLija;3;80\nCola;1;300\n"}
+  }
+]

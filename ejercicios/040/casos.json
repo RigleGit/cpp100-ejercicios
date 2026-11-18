@@ -1,0 +1,34 @@
+[
+  {
+    "name": "normal",
+    "stdin": "6 3 -1 -4 5 0 -2\n",
+    "stdout": "Original: 3 -1 -4 5 0 -2\nCon el bucle: 3 5 0\nQuitados con el bucle: 3\nCon std::erase_if: 3 5 0\nQuitados con std::erase_if: 3\n"
+  },
+  {
+    "name": "negativos_seguidos",
+    "stdin": "4 -1 -2 -3 4\n",
+    "stdout": "Original: -1 -2 -3 4\nCon el bucle: 4\nQuitados con el bucle: 3\nCon std::erase_if: 4\nQuitados con std::erase_if: 3\n"
+  },
+  {
+    "name": "todos_negativos",
+    "stdin": "3 -1 -2 -3\n",
+    "stdout": "Original: -1 -2 -3\nCon el bucle:\nQuitados con el bucle: 3\nCon std::erase_if:\nQuitados con std::erase_if: 3\n"
+  },
+  {
+    "name": "ninguno",
+    "stdin": "3 1 2 3\n",
+    "stdout": "Original: 1 2 3\nCon el bucle: 1 2 3\nQuitados con el bucle: 0\nCon std::erase_if: 1 2 3\nQuitados con std::erase_if: 0\n"
+  },
+  {
+    "name": "vacio",
+    "stdin": "0\n",
+    "stdout": "Original:\nCon el bucle:\nQuitados con el bucle: 0\nCon std::erase_if:\nQuitados con std::erase_if: 0\n"
+  },
+  {
+    "name": "invalida",
+    "stdin": "2 1\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: entrada no válida.\n"
+  }
+]

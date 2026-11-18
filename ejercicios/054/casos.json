@@ -1,0 +1,27 @@
+[
+  {
+    "name": "normal",
+    "stdin": "roma amor caso mora ramo saco tela leta sol cosa\n",
+    "stdout": "acos: caso saco cosa\naelt: tela leta\namor: roma amor mora ramo\n"
+  },
+  {
+    "name": "mayúsculas y repetidas",
+    "stdin": "Roma roma MORA\n",
+    "stdout": "amor: roma mora\n"
+  },
+  {
+    "name": "sin anagramas",
+    "stdin": "uno dos tres\n",
+    "stdout": "Sin anagramas.\n"
+  },
+  {
+    "name": "repetida sola no cuenta",
+    "stdin": "sol sol\n",
+    "stdout": "Sin anagramas.\n"
+  },
+  {
+    "name": "vacía",
+    "stdin": "",
+    "stdout": "Sin anagramas.\n"
+  }
+]

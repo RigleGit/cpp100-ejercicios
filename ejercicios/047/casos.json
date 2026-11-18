@@ -1,0 +1,27 @@
+[
+  {
+    "name": "normal",
+    "stdin": "go rust c go java c go\n",
+    "stdout": "Leídas: 7\nDistintas: 4\nc\ngo\njava\nrust\n"
+  },
+  {
+    "name": "mayúsculas distintas",
+    "stdin": "Go go GO\n",
+    "stdout": "Leídas: 3\nDistintas: 3\nGO\nGo\ngo\n"
+  },
+  {
+    "name": "varias líneas",
+    "stdin": "pera\nmanzana pera\n\nkiwi\n",
+    "stdout": "Leídas: 4\nDistintas: 3\nkiwi\nmanzana\npera\n"
+  },
+  {
+    "name": "todas iguales",
+    "stdin": "sí sí sí\n",
+    "stdout": "Leídas: 3\nDistintas: 1\nsí\n"
+  },
+  {
+    "name": "vacía",
+    "stdin": "",
+    "stdout": "Leídas: 0\nDistintas: 0\n"
+  }
+]

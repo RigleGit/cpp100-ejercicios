@@ -1,0 +1,90 @@
+[
+  {
+    "name": "añadir crea el archivo",
+    "args": ["tareas.txt", "añadir", "Comprar pan"],
+    "stdout": "Añadida la tarea 1: Comprar pan\n",
+    "expect_files": {"tareas.txt": "1;pendiente;Comprar pan\n"}
+  },
+  {
+    "name": "añadir al final",
+    "args": ["tareas.txt", "añadir", "Revisar la lista; y tachar"],
+    "files": {"tareas.txt": "1;hecha;Comprar pan\n2;pendiente;Llamar a Luis\n"},
+    "stdout": "Añadida la tarea 3: Revisar la lista; y tachar\n",
+    "expect_files": {"tareas.txt": "1;hecha;Comprar pan\n2;pendiente;Llamar a Luis\n3;pendiente;Revisar la lista; y tachar\n"}
+  },
+  {
+    "name": "listar",
+    "args": ["tareas.txt", "listar"],
+    "files": {"tareas.txt": "1;hecha;Comprar pan\n2;pendiente;Llamar a Luis\n"},
+    "stdout": "[x] 1 Comprar pan\n[ ] 2 Llamar a Luis\n"
+  },
+  {
+    "name": "listar sin archivo no lo crea",
+    "args": ["tareas.txt", "listar"],
+    "stdout": "No hay tareas.\n"
+  },
+  {
+    "name": "completar",
+    "args": ["tareas.txt", "completar", "2"],
+    "files": {"tareas.txt": "1;hecha;Comprar pan\n2;pendiente;Llamar a Luis\n"},
+    "stdout": "Completada la tarea 2.\n",
+    "expect_files": {"tareas.txt": "1;hecha;Comprar pan\n2;hecha;Llamar a Luis\n"}
+  },
+  {
+    "name": "completar dos veces",
+    "args": ["tareas.txt", "completar", "1"],
+    "files": {"tareas.txt": "1;hecha;Comprar pan\n"},
+    "stdout": "La tarea 1 ya estaba completada.\n",
+    "expect_files": {"tareas.txt": "1;hecha;Comprar pan\n"}
+  },
+  {
+    "name": "completar una tarea inexistente",
+    "args": ["tareas.txt", "completar", "7"],
+    "files": {"tareas.txt": "1;pendiente;Comprar pan\n"},
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: no existe la tarea 7.\n",
+    "expect_files": {"tareas.txt": "1;pendiente;Comprar pan\n"}
+  },
+  {
+    "name": "identificador no numérico",
+    "args": ["tareas.txt", "completar", "dos"],
+    "files": {"tareas.txt": "1;pendiente;Comprar pan\n"},
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: 'dos' no es un identificador válido.\n"
+  },
+  {
+    "name": "texto vacío",
+    "args": ["tareas.txt", "añadir", "   "],
+    "files": {"tareas.txt": "1;pendiente;Comprar pan\n"},
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: el texto de la tarea está vacío.\n",
+    "expect_files": {"tareas.txt": "1;pendiente;Comprar pan\n"}
+  },
+  {
+    "name": "archivo dañado no se sobrescribe",
+    "args": ["tareas.txt", "añadir", "Otra"],
+    "files": {"tareas.txt": "1;pendiente;Comprar pan\n2;quizá;Llamar\n"},
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: tareas.txt, línea 2: estado desconocido 'quizá'.\n",
+    "expect_files": {"tareas.txt": "1;pendiente;Comprar pan\n2;quizá;Llamar\n"}
+  },
+  {
+    "name": "identificadores repetidos",
+    "args": ["tareas.txt", "listar"],
+    "files": {"tareas.txt": "1;pendiente;Comprar pan\n1;hecha;Llamar\n"},
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: tareas.txt, línea 2: los identificadores deben crecer.\n"
+  },
+  {
+    "name": "orden desconocida",
+    "args": ["tareas.txt", "borrar", "1"],
+    "status": 1,
+    "stdout": "",
+    "stderr": "Uso: 098 ARCHIVO listar\n     098 ARCHIVO añadir TEXTO\n     098 ARCHIVO completar ID\n"
+  }
+]

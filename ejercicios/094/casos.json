@@ -1,0 +1,26 @@
+[
+  {
+    "name": "fechas válidas",
+    "stdin": "2024-03-01\n2023-03-01\n2024-12-31\n0001-01-01\n",
+    "stdout": "2024-03-01: día 61 de 366\n2023-03-01: día 60 de 365\n2024-12-31: día 366 de 366\n0001-01-01: día 1 de 365\n"
+  },
+  {
+    "name": "29 de febrero y siglos",
+    "stdin": "2000-02-29\n1900-02-29\n2024-02-29\n",
+    "status": 1,
+    "stdout": "2000-02-29: día 60 de 366\n2024-02-29: día 60 de 366\n",
+    "stderr": "Error en la línea 2: '1900-02-29' no es una fecha AAAA-MM-DD válida.\n"
+  },
+  {
+    "name": "formatos rechazados",
+    "stdin": "2024-3-1\n\n2024-04-31\n2024-13-01\n0000-01-01\n 2024-01-01\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error en la línea 1: '2024-3-1' no es una fecha AAAA-MM-DD válida.\nError en la línea 3: '2024-04-31' no es una fecha AAAA-MM-DD válida.\nError en la línea 4: '2024-13-01' no es una fecha AAAA-MM-DD válida.\nError en la línea 5: '0000-01-01' no es una fecha AAAA-MM-DD válida.\nError en la línea 6: ' 2024-01-01' no es una fecha AAAA-MM-DD válida.\n"
+  },
+  {
+    "name": "sin entrada",
+    "stdin": "",
+    "stdout": ""
+  }
+]

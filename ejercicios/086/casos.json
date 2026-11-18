@@ -1,0 +1,6 @@
+[
+  {
+    "name": "descripciones",
+    "stdout": "bool: booleano\nint: entero con signo de 4 bytes\nstd::uint16_t: entero sin signo de 2 bytes\nstd::int64_t: entero con signo de 8 bytes\ndouble: decimal de 8 bytes\nstd::string: texto\nstd::vector<int>: vector de entero con signo de 4 bytes\nmatriz: vector de vector de decimal de 8 bytes\nPunto: tipo sin descripción\n"
+  }
+]

@@ -1,0 +1,71 @@
+[
+  {
+    "name": "normal",
+    "stdin": "Ana López\ningresar 150\nretirar 30\nretirar 500\n",
+    "stdout": "Titular: Ana López\nRechazado: retirar 500 (saldo 120)\nMovimientos: 2\n  ingreso 150 -> saldo 150\n  retirada 30 -> saldo 120\nSaldo final: 120\n"
+  },
+  {
+    "name": "retirar todo",
+    "stdin": "Luis\ningresar 80\nretirar 80\n",
+    "stdout": "Titular: Luis\nMovimientos: 2\n  ingreso 80 -> saldo 80\n  retirada 80 -> saldo 0\nSaldo final: 0\n"
+  },
+  {
+    "name": "retirar con saldo cero",
+    "stdin": "Marta\nretirar 1\n",
+    "stdout": "Titular: Marta\nRechazado: retirar 1 (saldo 0)\nMovimientos: 0\nSaldo final: 0\n"
+  },
+  {
+    "name": "sin movimientos",
+    "stdin": "Marta\n",
+    "stdout": "Titular: Marta\nMovimientos: 0\nSaldo final: 0\n"
+  },
+  {
+    "name": "sin titular",
+    "stdin": "",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la primera línea debe llevar el titular.\n"
+  },
+  {
+    "name": "titular vacío",
+    "stdin": "\ningresar 10\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: la primera línea debe llevar el titular.\n"
+  },
+  {
+    "name": "orden desconocida",
+    "stdin": "Ana\ningresar 10\ntransferir 5\n",
+    "status": 1,
+    "stdout": "Titular: Ana\n",
+    "stderr": "Error en la línea 3: usa «ingresar N» o «retirar N» con N de 1 a 1000000.\n"
+  },
+  {
+    "name": "importe cero",
+    "stdin": "Ana\ningresar 0\n",
+    "status": 1,
+    "stdout": "Titular: Ana\n",
+    "stderr": "Error en la línea 2: usa «ingresar N» o «retirar N» con N de 1 a 1000000.\n"
+  },
+  {
+    "name": "importe negativo",
+    "stdin": "Ana\nretirar -5\n",
+    "status": 1,
+    "stdout": "Titular: Ana\n",
+    "stderr": "Error en la línea 2: usa «ingresar N» o «retirar N» con N de 1 a 1000000.\n"
+  },
+  {
+    "name": "importe excesivo",
+    "stdin": "Ana\ningresar 1000001\n",
+    "status": 1,
+    "stdout": "Titular: Ana\n",
+    "stderr": "Error en la línea 2: usa «ingresar N» o «retirar N» con N de 1 a 1000000.\n"
+  },
+  {
+    "name": "sobra texto",
+    "stdin": "Ana\ningresar 10 euros\n",
+    "status": 1,
+    "stdout": "Titular: Ana\n",
+    "stderr": "Error en la línea 2: usa «ingresar N» o «retirar N» con N de 1 a 1000000.\n"
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "name": "normal",
+    "stdin": "casa perro\n",
+    "stdout": "Primera: casa (4 caracteres)\nSegunda: perro (5 caracteres)\nUnidas: casa perro (10 caracteres)\ncasa va antes que perro.\n"
+  },
+  {
+    "name": "iguales",
+    "stdin": "sol sol\n",
+    "stdout": "Primera: sol (3 caracteres)\nSegunda: sol (3 caracteres)\nUnidas: sol sol (7 caracteres)\nSon iguales.\n"
+  },
+  {
+    "name": "orden_inverso",
+    "stdin": "zorro abeja\n",
+    "stdout": "Primera: zorro (5 caracteres)\nSegunda: abeja (5 caracteres)\nUnidas: zorro abeja (11 caracteres)\nabeja va antes que zorro.\n"
+  },
+  {
+    "name": "mayusculas",
+    "stdin": "Zorro abeja\n",
+    "stdout": "Primera: Zorro (5 caracteres)\nSegunda: abeja (5 caracteres)\nUnidas: Zorro abeja (11 caracteres)\nZorro va antes que abeja.\n"
+  },
+  {
+    "name": "prefijo",
+    "stdin": "casa ca\n",
+    "stdout": "Primera: casa (4 caracteres)\nSegunda: ca (2 caracteres)\nUnidas: casa ca (7 caracteres)\nca va antes que casa.\n"
+  },
+  {
+    "name": "una_letra",
+    "stdin": "a b\n",
+    "stdout": "Primera: a (1 carácter)\nSegunda: b (1 carácter)\nUnidas: a b (3 caracteres)\na va antes que b.\n"
+  },
+  {
+    "name": "falta_palabra",
+    "stdin": "sola\n",
+    "status": 1,
+    "stdout": "",
+    "stderr": "Error: se esperaban dos palabras.\n"
+  }
+]

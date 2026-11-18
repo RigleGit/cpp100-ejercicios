@@ -1,0 +1,27 @@
+[
+  {
+    "name": "normal",
+    "stdin": "Go go C go\nc++ C\n",
+    "stdout": "Palabras: 6\nDistintas: 3\nc: 2\nc++: 1\ngo: 3\n"
+  },
+  {
+    "name": "puntuación cuenta",
+    "stdin": "Hola, hola hola.\n",
+    "stdout": "Palabras: 3\nDistintas: 3\nhola: 1\nhola,: 1\nhola.: 1\n"
+  },
+  {
+    "name": "orden por bytes",
+    "stdin": "zeta Ñu árbol beta\n",
+    "stdout": "Palabras: 4\nDistintas: 4\nbeta: 1\nzeta: 1\nÑu: 1\nárbol: 1\n"
+  },
+  {
+    "name": "vacía",
+    "stdin": "",
+    "stdout": "Palabras: 0\nDistintas: 0\n"
+  },
+  {
+    "name": "solo espacios",
+    "stdin": "   \n\t\n",
+    "stdout": "Palabras: 0\nDistintas: 0\n"
+  }
+]

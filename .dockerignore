@@ -1,0 +1,14 @@
+.git
+.verification
+build
+dist
+**/__pycache__
+**/.DS_Store
+**/*.pyc
+**/*.o
+**/*.out
+**/*.log
+.env
+.env.*
+**/.venv
+**/*.exe

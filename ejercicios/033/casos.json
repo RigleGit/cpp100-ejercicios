@@ -1,0 +1,21 @@
+[
+  {
+    "name": "normal",
+    "stdin": "42 -7 007 12abc 99999999999 +5 -\n",
+    "stdout": "42: 42\n-7: -7\n007: 7\n12abc: no es un entero\n99999999999: fuera de rango\n+5: no es un entero\n-: no es un entero\nVálidos: 3\nSuma: 42\n"
+  },
+  {
+    "name": "limites",
+    "stdin": "2147483647 -2147483648 2147483648\n",
+    "stdout": "2147483647: 2147483647\n-2147483648: -2147483648\n2147483648: fuera de rango\nVálidos: 2\nSuma: -1\n"
+  },
+  {
+    "name": "vacia",
+    "stdout": "Válidos: 0\nSuma: 0\n"
+  },
+  {
+    "name": "solo_invalidos",
+    "stdin": "x 1.5\n",
+    "stdout": "x: no es un entero\n1.5: no es un entero\nVálidos: 0\nSuma: 0\n"
+  }
+]
