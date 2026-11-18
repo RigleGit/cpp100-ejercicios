@@ -36,6 +36,6 @@
     "stdin": "2 4\n",
     "status": 1,
     "stdout": "",
-    "stderr": "Error: entrada no válida.\n"
+    "stderr": "Error: faltan números o hay uno no válido.\n"
   }
 ]

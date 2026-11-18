@@ -14,13 +14,13 @@ long long sumar(const std::vector<int>& valores) {
 int main() {
     int n{};
     if (!(std::cin >> n) || n < 0 || n > 1000) {
-        std::cerr << "Error: entrada no válida.\n";
+        std::cerr << "Error: faltan números o hay uno no válido.\n";
         return 1;
     }
     std::vector<int> valores(static_cast<std::size_t>(n));
     for (int& valor : valores) {
         if (!(std::cin >> valor)) {
-            std::cerr << "Error: entrada no válida.\n";
+            std::cerr << "Error: faltan números o hay uno no válido.\n";
             return 1;
         }
     }

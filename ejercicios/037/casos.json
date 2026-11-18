@@ -23,14 +23,14 @@
     "stdin": "1 2 tres\n",
     "status": 1,
     "stdout": "",
-    "stderr": "Error: entrada no válida.\n"
+    "stderr": "Error: faltan números o hay uno no válido.\n"
   },
   {
     "name": "signo_al_final",
     "stdin": "1 2 -",
     "status": 1,
     "stdout": "",
-    "stderr": "Error: entrada no válida.\n"
+    "stderr": "Error: faltan números o hay uno no válido.\n"
   },
   {
     "name": "ultimo_sin_salto",

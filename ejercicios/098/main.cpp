@@ -35,7 +35,7 @@ int main(int argc, char* argv[]) {
         std::cerr << "Uso: 098 ARCHIVO listar\n"
                      "     098 ARCHIVO añadir TEXTO\n"
                      "     098 ARCHIVO completar ID\n";
-        return 1;
+        return 2;
     }
     const std::string& ruta = args[0];
     const std::string& orden = args[1];

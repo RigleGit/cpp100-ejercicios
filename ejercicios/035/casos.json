@@ -34,27 +34,27 @@
     "stdin": "3 1 2\n",
     "status": 1,
     "stdout": "",
-    "stderr": "Error: entrada no válida.\n"
+    "stderr": "Error: faltan números o hay uno no válido.\n"
   },
   {
     "name": "n_negativo",
     "stdin": "-1\n",
     "status": 1,
     "stdout": "",
-    "stderr": "Error: entrada no válida.\n"
+    "stderr": "Error: faltan números o hay uno no válido.\n"
   },
   {
     "name": "n_demasiado",
     "stdin": "1001\n",
     "status": 1,
     "stdout": "",
-    "stderr": "Error: entrada no válida.\n"
+    "stderr": "Error: faltan números o hay uno no válido.\n"
   },
   {
     "name": "no_numerico",
     "stdin": "2 1 x\n",
     "status": 1,
     "stdout": "",
-    "stderr": "Error: entrada no válida.\n"
+    "stderr": "Error: faltan números o hay uno no válido.\n"
   }
 ]

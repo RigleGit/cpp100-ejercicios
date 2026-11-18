@@ -17,7 +17,7 @@ int main() {
     while (std::cin >> std::ws && !std::cin.eof()) {
         int valor{};
         if (!(std::cin >> valor)) {
-            std::cerr << "Error: entrada no válida.\n";
+            std::cerr << "Error: faltan números o hay uno no válido.\n";
             return 1;
         }
         valores.push_back(valor);

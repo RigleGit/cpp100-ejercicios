@@ -44,7 +44,7 @@ int main() {
     std::vector<int> valores;
     int buscado{};
     if (!leerValores(valores) || !(std::cin >> buscado)) {
-        std::cerr << "Error: entrada no válida.\n";
+        std::cerr << "Error: faltan números o hay uno no válido.\n";
         return 1;
     }
     if (!estaOrdenado(valores)) {

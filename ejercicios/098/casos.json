@@ -83,7 +83,7 @@
   {
     "name": "orden desconocida",
     "args": ["tareas.txt", "borrar", "1"],
-    "status": 1,
+    "status": 2,
     "stdout": "",
     "stderr": "Uso: 098 ARCHIVO listar\n     098 ARCHIVO añadir TEXTO\n     098 ARCHIVO completar ID\n"
   }
